@@ -1,0 +1,5 @@
+format:
+    gdformat .
+
+lint:
+    gdlint .
