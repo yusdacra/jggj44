@@ -1,7 +1,7 @@
 extends Control
 
-@onready var btn_play = $MarginContainer/Control/VBoxContainer/PlayButton
-@onready var btn_exit = $MarginContainer/Control/VBoxContainer/ExitButton
+@export var btn_play: Button
+@export var btn_exit: Button
 
 
 func _ready():
@@ -13,11 +13,7 @@ func _ready():
 
 func _on_PlayButton_pressed() -> void:
 	var params = {
-		"show_progress_bar": true,
-		"a_number": 10,
-		"a_string": "Ciao!",
-		"an_array": [1, 2, 3, 4],
-		"a_dict": {"name": "test", "val": 15},
+		"show_progress_bar": false,
 	}
 	Game.change_scene_to_file("res://scenes/gameplay/gameplay.tscn", params)
 
