@@ -1,25 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://82fiitkfc6wn"]
+[gd_scene load_steps=9 format=3 uid="uid://82fiitkfc6wn"]
 
-[ext_resource type="FontFile" uid="uid://cawekr44fruhm" path="res://assets/fonts/open-sans/open-sans-regular.ttf" id="1"]
 [ext_resource type="Script" path="res://addons/ggt-core/transitions/progress.gd" id="3"]
 [ext_resource type="Script" path="res://addons/ggt-core/transitions/transitions.gd" id="4"]
-
-[sub_resource type="FontFile" id="4"]
-fallbacks = Array[Font]([ExtResource("1")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/28/0 = Vector2(0, 0)
-cache/0/28/0/ascent = 0.0
-cache/0/28/0/descent = 0.0
-cache/0/28/0/underline_position = 0.0
-cache/0/28/0/underline_thickness = 0.0
-cache/0/28/0/scale = 1.0
-cache/0/28/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/28/0/kerning_overrides/28/0 = Vector2(0, 0)
 
 [sub_resource type="Animation" id="10"]
 length = 0.001
@@ -33,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.0862745, 0.0862745, 0.0862745, 0)]
+"values": [Color(0, 0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -72,7 +54,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.0862745, 0.0862745, 0.0862745, 1)]
+"values": [Color(0, 0, 0, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -101,7 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0862745, 0.0862745, 0.0862745, 0), Color(0.0862745, 0.0862745, 0.0862745, 1)]
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -153,7 +135,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(0.0862745, 0.0862745, 0.0862745, 1), Color(0.0862745, 0.0862745, 0.0862745, 1), Color(0.0862745, 0.0862745, 0.0862745, 0)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -180,7 +162,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.0862745, 0.0862745, 0.0862745, 0)]
+"values": [Color(0, 0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -215,7 +197,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color(0.0862745, 0.0862745, 0.0862745, 0)
+color = Color(0, 0, 0, 0)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -244,7 +226,6 @@ offset_top = -27.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
-theme_override_fonts/font = SubResource("4")
 theme_override_font_sizes/font_size = 16
 max_value = 1.0
 
