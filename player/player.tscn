@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_ao52m"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="1_u81e2"]
-[ext_resource type="AudioStream" uid="uid://dj8v7ef5hfnib" path="res://resources/audio/footstep_wood_randomizer.tres" id="2_swuo6"]
+[ext_resource type="AudioStream" uid="uid://b8dmnte1gvcvt" path="res://resources/audio/footstep_carpet_randomizer.tres" id="3_2c3wn"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_ao52m")
@@ -20,7 +20,6 @@ FORWARD = "gameplay_move_forwards"
 BACKWARD = "gameplay_move_backwards"
 CROUCH = "gameplay_crouch"
 SPRINT = "gameplay_sprint"
-crouch_enabled = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Controller"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.4, 0)
@@ -29,14 +28,14 @@ spot_angle = 80.0
 
 [node name="FootstepSfxL" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("2_swuo6")
+stream = ExtResource("3_2c3wn")
 volume_db = -20.0
 max_polyphony = 4
 bus = &"SFX L"
 
 [node name="FootstepSfxR" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("2_swuo6")
+stream = ExtResource("3_2c3wn")
 volume_db = -20.0
 max_polyphony = 4
 bus = &"SFX R"

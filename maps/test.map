@@ -51,4 +51,13 @@
 ( 0 0 192 ) ( 512 0 0 ) ( 512 0 192 ) oldschool/Paint_wall_seamless_2 [ -1 6.123233995736766e-17 0 512 ] [ 0 0 -1 0 ] 0 1 1
 ( 512 0 192 ) ( 512 -32 0 ) ( 512 -32 192 ) oldschool/Paint_wall_seamless_2 [ 6.123233995736766e-17 1 0 544 ] [ 0 0 -1 0 ] 0 1 1
 }
+// brush 5
+{
+( 96 384 0 ) ( 96 385 0 ) ( 96 384 1 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 96 384 0 ) ( 96 384 1 ) ( 97 384 0 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 96 384 0 ) ( 97 384 0 ) ( 96 385 0 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 416 32 ) ( 128 417 32 ) ( 129 416 32 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 128 416 32 ) ( 129 416 32 ) ( 128 416 33 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 128 416 32 ) ( 128 416 33 ) ( 128 417 32 ) oldschool/Paint_wall_seamless [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
