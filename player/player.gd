@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 class_name Player
 
 @export var footstep_time: float = 1.0 / 2

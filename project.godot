@@ -123,5 +123,7 @@ gameplay_sprint={
 
 textures/canvas_textures/default_texture_filter=3
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=1
 occlusion_culling/use_occlusion_culling=true
 environment/defaults/default_environment="res://resources/environments/default_env.tres"

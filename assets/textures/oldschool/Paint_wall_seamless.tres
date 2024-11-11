@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dio21ym65ei2l"]
+
+[ext_resource type="Texture2D" uid="uid://mhljhd8gn73t" path="res://assets/textures/oldschool/Paint_wall_seamless.png" id="1_qytsh"]
+
+[resource]
+albedo_texture = ExtResource("1_qytsh")
+metallic_specular = 0.0
+texture_filter = 2

@@ -26,7 +26,7 @@ map_formats = Array[Dictionary]([{
 }, {
 "format": "Quake3"
 }])
-textures_root_folder = "textures"
+textures_root_folder = "assets/textures"
 texture_exclusion_patterns = Array[String](["*_albedo", "*_ao", "*_emission", "*_height", "*_metallic", "*_normal", "*_orm", "*_roughness", "*_sss"])
 palette_path = "textures/palette.lmp"
 fgd_file = ExtResource("1_8u1vq")
