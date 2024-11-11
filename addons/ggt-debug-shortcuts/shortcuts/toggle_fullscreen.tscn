@@ -5,18 +5,17 @@ script/source = "extends Node
 
 
 func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.keycode == KEY_F and event.is_released():
-			if OS.is_debug_build():
-				if get_window().mode != Window.MODE_MAXIMIZED:
-					get_window().mode = Window.MODE_MAXIMIZED
-				else:
-					get_window().mode = Window.MODE_WINDOWED
+	if event.is_action_pressed(\"fullscreen\"):
+		if OS.is_debug_build():
+			if get_window().mode != Window.MODE_MAXIMIZED:
+				get_window().mode = Window.MODE_MAXIMIZED
 			else:
-				if get_window().mode != Window.MODE_FULLSCREEN:
-					get_window().mode = Window.MODE_FULLSCREEN
-				else:
-					get_window().mode = Window.MODE_WINDOWED
+				get_window().mode = Window.MODE_WINDOWED
+		else:
+			if get_window().mode != Window.MODE_FULLSCREEN:
+				get_window().mode = Window.MODE_FULLSCREEN
+			else:
+				get_window().mode = Window.MODE_WINDOWED
 "
 
 [node name="ToggleFullscreen" type="Node"]

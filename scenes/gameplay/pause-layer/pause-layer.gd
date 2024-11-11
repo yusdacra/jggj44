@@ -3,14 +3,6 @@ extends CanvasLayer
 @export var pause_action := "ui_pause"
 
 func _ready():
-	pause_hide()
-
-
-func pause_show():
-	show()
-
-
-func pause_hide():
 	hide()
 
 
@@ -26,14 +18,14 @@ func _unhandled_input(event):
 func resume():
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	pause_hide()
+	hide()
 
 
 func pause():
 	%Resume.grab_focus()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().paused = true
-	pause_show()
+	show()
 
 
 func _on_Resume_pressed():
