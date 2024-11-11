@@ -14,3 +14,6 @@ builds/**/*
 
 # OSX 
 .DS_Store
+
+# trenchbroom
+maps/autosave
