@@ -4,6 +4,7 @@
 # Godot-specific ignores
 .import/
 .godot/
+recorded.avi
 
 # Builds/export directory
 builds/**/*
