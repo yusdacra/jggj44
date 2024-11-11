@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_ao52m"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="1_u81e2"]
-[ext_resource type="AudioStream" uid="uid://b8dmnte1gvcvt" path="res://resources/audio/footstep_carpet_randomizer.tres" id="3_2c3wn"]
+[ext_resource type="AudioStream" uid="uid://b8dmnte1gvcvt" path="res://resources/audio/sfx_footsep_carpet.tres" id="3_2c3wn"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_ao52m")

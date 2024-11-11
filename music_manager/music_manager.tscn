@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qxuwsbkkuuv"]
+
+[ext_resource type="Script" path="res://music_manager/music_manager.gd" id="1_klfop"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_klfop")
+
+[node name="Player" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"BGM"
