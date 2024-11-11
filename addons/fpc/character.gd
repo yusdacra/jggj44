@@ -147,6 +147,12 @@ func change_reticle(reticle): # Yup, this function is kinda strange
 	RETICLE.character = self
 	$UserInterface.add_child(RETICLE)
 
+func get_input_dir() -> Vector2:
+	if !immobile: # Immobility works by interrupting user input, so other forces can still be applied to the player
+		return Input.get_vector(LEFT, RIGHT, FORWARD, BACKWARD)
+	else:
+		return Vector2.ZERO
+
 
 func _physics_process(delta):
 	# Big thanks to github.com/LorenzoAncora for the concept of the improved debug values
@@ -169,9 +175,7 @@ func _physics_process(delta):
 	
 	handle_jumping()
 	
-	var input_dir = Vector2.ZERO
-	if !immobile: # Immobility works by interrupting user input, so other forces can still be applied to the player
-		input_dir = Input.get_vector(LEFT, RIGHT, FORWARD, BACKWARD)
+	var input_dir = get_input_dir()
 	handle_movement(delta, input_dir)
 
 	handle_head_rotation()

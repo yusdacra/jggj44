@@ -1,6 +1,5 @@
 extends Node
 
-const Player := preload("res://addons/fpc/character.gd")
 @export var player: Player
 
 # `pre_start()` is called when a scene is loaded.

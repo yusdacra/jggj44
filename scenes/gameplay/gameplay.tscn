@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="4_4d0i0"]
 [ext_resource type="Script" path="res://scenes/gameplay/gameplay.gd" id="5"]
 [ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://addons/func_godot/textures/default_texture.png" id="5_ut4pw"]
-[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="6_b4w1q"]
+[ext_resource type="PackedScene" uid="uid://doo7btwteixax" path="res://player/player.tscn" id="7_a368b"]
 [ext_resource type="Environment" uid="uid://dlwhmotjkhqlx" path="res://resources/environments/default_env.tres" id="7_vxpkc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04m63"]
@@ -35,9 +35,8 @@ indices = PackedInt32Array(0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_osi4a"]
 points = PackedVector3Array(-11.75, 0.5, -16.875, -11.75, -0.5, -16.875, 11.625, -0.5, -16.875, 11.625, 0.5, -16.875, -11.75, 0.5, 14, -11.75, -0.5, 14, 11.625, -0.5, 14, 11.625, 0.5, 14)
 
-[node name="Gameplay" type="Node" node_paths=PackedStringArray("player")]
+[node name="Gameplay" type="Node"]
 script = ExtResource("5")
-player = NodePath("Player")
 
 [node name="PauseLayer" parent="." instance=ExtResource("2")]
 
@@ -58,20 +57,7 @@ occluder = SubResource("ArrayOccluder3D_1m7co")
 [node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="TestMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_osi4a")
 
-[node name="Player" parent="." instance=ExtResource("6_b4w1q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26301, 0)
-base_speed = 4.0
-sprint_speed = 8.0
-acceleration = 12.0
-default_reticle = "res://addons/fpc/reticles/reticle_0.tscn"
-JUMP = "gameplay_jump"
-LEFT = "gameplay_move_left"
-RIGHT = "gameplay_move_right"
-FORWARD = "gameplay_move_forwards"
-BACKWARD = "gameplay_move_backwards"
-CROUCH = "gameplay_crouch"
-SPRINT = "gameplay_sprint"
-crouch_enabled = false
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_vxpkc")
+
+[node name="Player" parent="." instance=ExtResource("7_a368b")]
