@@ -95,6 +95,8 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") 
 # Stores mouse input for rotating the camera in the phyhsics process
 var mouseInput : Vector2 = Vector2(0,0)
 
+var interact_ray: RayCast3D = null
+
 func _ready():
 	#It is safe to comment this line if your game doesn't start with the mouse captured
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -113,6 +115,10 @@ func _ready():
 	CROUCH_ANIMATION.play("RESET")
 	
 	check_controls()
+	
+	# add player to interactable exclude
+	%InteractCast.add_exception(self)
+	interact_ray = %InteractCast
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
 	# The actions are being disabled so the engine doesn't halt the entire project in debug mode
@@ -152,7 +158,6 @@ func get_input_dir() -> Vector2:
 		return Input.get_vector(LEFT, RIGHT, FORWARD, BACKWARD)
 	else:
 		return Vector2.ZERO
-
 
 func _physics_process(delta):
 	# Big thanks to github.com/LorenzoAncora for the concept of the improved debug values
@@ -202,7 +207,7 @@ func _physics_process(delta):
 
 
 func handle_jumping():
-	if jumping_enabled:
+	if not immobile and jumping_enabled:
 		if continuous_jumping: # Hold down the jump button
 			if Input.is_action_pressed(JUMP) and is_on_floor() and !low_ceiling:
 				if jump_animation:

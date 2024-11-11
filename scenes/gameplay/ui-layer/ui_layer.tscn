@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://x214aegqynyi"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/ui-layer/ui_layer.gd" id="1_75wf1"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://dialogue/balloon/dialogue_balloon.tscn" id="2_jaiav"]
+
+[node name="UILayer" type="CanvasLayer"]
+script = ExtResource("1_75wf1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -129.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 96
+
+[node name="InteractText" type="RichTextLabel" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]press F to interact with object"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="DialogueBalloon" parent="." instance=ExtResource("2_jaiav")]
+unique_name_in_owner = true

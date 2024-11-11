@@ -8,26 +8,24 @@
 #  gameplay input is unlocked
 extends Node
 
-signal change_started
-signal change_finished
+signal change_started(scene_path: String, params: Dictionary)
+signal change_finished(scene: Node)
 
 var _params = {} # params caching
 var _loading_start_time = 0
 
 @onready var transitions = get_node("/root/Transitions")
 @onready var _history = preload("res://addons/ggt-core/scenes/scenes-history.gd").new()
-@onready
-var _loader_mt = preload("res://addons/ggt-core/utils/resource_multithread_loader.gd").new()
+@onready var _loader_mt = preload("res://addons/ggt-core/utils/resource_multithread_loader.gd").new()
 var config = preload("res://addons/ggt-core/config.tres")
 
-
 func _ready():
-	if transitions:
-		_loader_mt.connect("resource_stage_loaded", transitions._on_resource_stage_loaded)
-	connect("change_started", _on_change_started)
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	if transitions:
+		_loader_mt.resource_stage_loaded.connect(transitions._on_resource_stage_loaded)
+	change_started.connect(_on_change_started)
 	var cur_scene: Node = get_tree().current_scene
-	_history.add(cur_scene.scene_file_path, {})
+	change_started.emit(cur_scene.scene_file_path, {})
 	# if playing a specific scene
 	if ProjectSettings.get("application/run/main_scene") != cur_scene.scene_file_path:
 		# call pre_start and start method to ensure compatibility with "Play Scene"
@@ -37,6 +35,7 @@ func _ready():
 			cur_scene.pre_start({})
 		if cur_scene.has_method("start"):
 			cur_scene.start()
+	change_finished.emit(cur_scene)
 
 
 func get_last_loaded_scene_data() -> SceneData:
@@ -58,7 +57,7 @@ func _set_new_scene(resource: PackedScene):
 		await transitions.anim.animation_finished
 	if instanced_scn.has_method("start"):
 		instanced_scn.start()
-	emit_signal("change_finished")
+	change_finished.emit(instanced_scn)
 	_params = {}
 	_loading_start_time = 0
 
@@ -70,11 +69,11 @@ func _transition_appear(params):
 
 # Multithread interactive loading
 func change_scene_multithread(new_scene: String, params = {}):
-	emit_signal("change_started", new_scene, params)
+	change_started.emit(new_scene, params)
 	_params = params
 	_loading_start_time = Time.get_ticks_msec()
 	_transition_appear(params)
-	_loader_mt.connect("resource_loaded", _on_resource_loaded, CONNECT_ONE_SHOT)
+	_loader_mt.resource_loaded.connect(_on_resource_loaded, CONNECT_ONE_SHOT)
 	await transitions.transition_covered_screen
 	_loader_mt.load_resource(new_scene)
 

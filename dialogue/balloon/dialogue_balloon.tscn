@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://73jm5qjy52vq"]
+
+[ext_resource type="Script" path="res://dialogue/balloon/dialogue_balloon.gd" id="1_lqkri"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2rmy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lcifs"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8eaiw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4jeio"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[node name="DialogueBalloon" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lqkri")
+
+[node name="Dialogue" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 64
+
+[node name="Panel" type="Panel" parent="Dialogue"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogue"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Dialogue/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "[center]Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/fill = SubResource("StyleBoxEmpty_i2rmy")
+theme_override_styles/background = SubResource("StyleBoxEmpty_lcifs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8eaiw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4jeio")
+text = "[center]Dialogue..."
+drag_and_drop_selection_enabled = false
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Dialogue/VBoxContainer" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+script = ExtResource("3_72ixx")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Dialogue/VBoxContainer/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
+[connection signal="gui_input" from="." to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Dialogue/VBoxContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

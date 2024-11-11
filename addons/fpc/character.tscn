@@ -319,6 +319,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera" type="Camera3D" parent="Head"]
 
+[node name="InteractCast" type="RayCast3D" parent="Head/Camera"]
+unique_name_in_owner = true
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 3
+collide_with_areas = true
+
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
 libraries = {
 "": SubResource("AnimationLibrary_o0unb")
