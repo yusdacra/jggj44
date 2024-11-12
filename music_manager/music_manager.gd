@@ -34,6 +34,8 @@ func _ready() -> void:
 		sync_stream.set_sync_stream(idx, layers[layer_tag])
 		sync_stream.set_sync_stream_volume(idx, MUTE_DB)
 		idx += 1
+	# make sure we play the music
+	%Player.play()
 	transition_to(start_layer)
 
 func _process(delta: float) -> void:
