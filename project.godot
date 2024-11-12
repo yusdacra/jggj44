@@ -20,6 +20,7 @@ config/icon="res://assets/sprites/icon.png"
 
 [autoload]
 
+Loggie="*res://addons/loggie/loggie.gd"
 DebugShortcuts="*res://addons/ggt-debug-shortcuts/autoload/debug_shortcuts.tscn"
 Game="*res://addons/ggt-core/game.gd"
 Transitions="*res://addons/ggt-core/transitions/transitions.tscn"
@@ -27,6 +28,7 @@ Scenes="*res://addons/ggt-core/scenes/scenes.gd"
 Utils="*res://addons/ggt-core/utils/utils.gd"
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+BGM="*res://music_manager/music_manager.tscn"
 
 [category]
 
@@ -49,7 +51,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/func_godot/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/dictionary_inspector/plugin.cfg", "res://addons/func_godot/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg", "res://addons/loggie/plugin.cfg")
 
 [gui]
 
@@ -144,6 +146,11 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue")
 
 3d_physics/layer_1="all"
 3d_physics/layer_2="interactable"
+
+[loggie]
+
+timestamps/output_timestamps=true
+formats/timestamp="[{hour}:{minute}:{second}]"
 
 [rendering]
 

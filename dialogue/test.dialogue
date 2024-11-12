@@ -5,4 +5,26 @@ Flower Pot: [[Hi|Hello|Howdy]], I'm a flower pot.
 	=> test_diag
 - Cool.
 	Flower Pot: You bet it is.
+- Change time
+	Flower Pot: What time?
+	- Day
+		set Scenes.current.time = 0.0
+	- Night
+		set Scenes.current.time = 180.0
+- Change light intensity
+	Flower Pot: What intensity?
+	- Dark 3
+		set Scenes.current.light_intensity = 0.0
+	- Dark 2
+		set Scenes.current.light_intensity = 25.0
+	- Dark 1
+		set Scenes.current.light_intensity = 50.0
+	- Neutral
+		set Scenes.current.light_intensity = 100.0
+	- Light 1
+		set Scenes.current.light_intensity = 125.0
+	- Light 2
+		set Scenes.current.light_intensity = 150.0
+	- Light 3
+		set Scenes.current.light_intensity = 175.0
 => END

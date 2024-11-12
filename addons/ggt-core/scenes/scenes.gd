@@ -19,11 +19,14 @@ var _loading_start_time = 0
 @onready var _loader_mt = preload("res://addons/ggt-core/utils/resource_multithread_loader.gd").new()
 var config = preload("res://addons/ggt-core/config.tres")
 
+var current: Node = null
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if transitions:
 		_loader_mt.resource_stage_loaded.connect(transitions._on_resource_stage_loaded)
 	change_started.connect(_on_change_started)
+	change_finished.connect(_on_change_finished)
 	var cur_scene: Node = get_tree().current_scene
 	change_started.emit(cur_scene.scene_file_path, {})
 	# if playing a specific scene
@@ -81,12 +84,15 @@ func change_scene_multithread(new_scene: String, params = {}):
 func _on_change_started(new_scene, params):
 	_history.add(new_scene, params)
 
+func _on_change_finished(scene: Node):
+	current = scene
+
 
 func _on_resource_loaded(resource):
 	if transitions and transitions.is_transition_in_playing():
 		await transitions.anim.animation_finished
 	var load_time = Time.get_ticks_msec() - _loading_start_time  # ms
-	print(
+	Loggie.info(
 		"{scn} loaded in {elapsed}ms".format({"scn": resource.resource_path, "elapsed": load_time})
 	)
 	# artificially wait some time in order to have a gentle scene transition
