@@ -4,6 +4,7 @@
 
 [resource]
 transparency = 1
+blend_mode = 1
 albedo_texture = ExtResource("1_oipar")
 metallic_specular = 0.0
 texture_filter = 4

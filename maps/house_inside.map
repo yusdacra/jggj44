@@ -355,8 +355,8 @@
 "classname" "func_geo"
 // brush 0
 {
-( 0 0 144 ) ( 0 1 144 ) ( 0 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
-( 0 0 144 ) ( 0 0 145 ) ( 1 0 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( -16 0 144 ) ( -16 1 144 ) ( -16 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 0 -16 144 ) ( 0 -16 145 ) ( 1 -16 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 0 0 144 ) ( 1 0 144 ) ( 0 1 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 896 160 ) ( 896 897 160 ) ( 897 896 160 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 352 112 144 ) ( 288 112 272 ) ( 288 112 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
@@ -364,7 +364,7 @@
 }
 // brush 1
 {
-( 0 -16 208 ) ( 0 0 16 ) ( 0 0 208 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 -20 ] [ 0 0 -1 0 ] 0 0.8 0.8
+( -16 -16 208 ) ( -16 0 16 ) ( -16 0 208 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 -20 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( 720 -16 208 ) ( -176 -16 16 ) ( -176 -16 208 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 220 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( 720 0 16 ) ( -176 -16 16 ) ( 720 -16 16 ) oldschool/Paint_wall_seamless_2 [ -1 0 0 -220 ] [ 0 -1 0 -20 ] 0 0.8 0.8
 ( 720 0 144 ) ( -176 -16 144 ) ( -176 0 144 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 220 ] [ 0 -1 0 -20 ] 0 0.8 0.8
@@ -458,7 +458,7 @@
 }
 // brush 3
 {
-( 0 432 16 ) ( 0 433 16 ) ( 0 432 17 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 48 432 16 ) ( 48 433 16 ) ( 48 432 17 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 ( 272 440 80 ) ( 400 440 64 ) ( 272 440 64 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
 ( 0 432 16 ) ( 1 432 16 ) ( 0 433 16 ) oldschool/Paint_wall_seamless_2 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( 272 448 144 ) ( 272 449 144 ) ( 273 448 144 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
@@ -476,7 +476,7 @@
 }
 // brush 5
 {
-( 64 576 208 ) ( 64 592 16 ) ( 64 592 208 ) oldschool/Paint_wall_seamless_2 [ -1.2246467991473532e-16 -1 0 -284 ] [ 0 0 -1 0 ] 0 0.8 0.8
+( 48 576 208 ) ( 48 592 16 ) ( 48 592 208 ) oldschool/Paint_wall_seamless_2 [ -1.2246467991473532e-16 -1 0 -284 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( -64 576 208 ) ( 832 576 16 ) ( -64 576 16 ) oldschool/Paint_wall_seamless_2 [ 1 -1.2246467991473532e-16 0 -16 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( -64 576 16 ) ( 832 592 16 ) ( -64 592 16 ) oldschool/Paint_wall_seamless_2 [ 1 -1.2246467991473532e-16 0 -16 ] [ 1.2246467991473532e-16 1 0 284 ] 180 0.8 0.8
 ( -64 576 144 ) ( 832 592 144 ) ( 832 576 144 ) oldschool/Paint_wall_seamless_2 [ -1 1.2246467991473532e-16 0 16 ] [ 1.2246467991473532e-16 1 0 284 ] 180 0.8 0.8
@@ -485,11 +485,11 @@
 }
 // brush 6
 {
-( 0 0 144 ) ( 0 1 144 ) ( 0 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 48 0 144 ) ( 48 1 144 ) ( 48 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 104 448 144 ) ( 112 448 272 ) ( 112 448 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 0 0 144 ) ( 1 0 144 ) ( 0 1 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 896 160 ) ( 896 897 160 ) ( 897 896 160 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
-( 896 576 160 ) ( 897 576 160 ) ( 896 576 161 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 896 592 160 ) ( 897 592 160 ) ( 896 592 161 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 352 0 160 ) ( 352 32 288 ) ( 352 32 160 ) oldschool/Paint_wall_seamless [ 0 1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 }
 // brush 7
@@ -516,7 +516,7 @@
 }
 // brush 1
 {
-( 0 0 144 ) ( 0 1 144 ) ( 0 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( -16 0 144 ) ( -16 1 144 ) ( -16 0 145 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 352 112 144 ) ( 288 112 144 ) ( 288 112 272 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 0 0 144 ) ( 1 0 144 ) ( 0 1 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 896 160 ) ( 896 897 160 ) ( 897 896 160 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
@@ -570,7 +570,7 @@
 }
 // brush 7
 {
-( 0 432 16 ) ( 0 433 16 ) ( 0 432 17 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( -16 432 16 ) ( -16 433 16 ) ( -16 432 17 ) oldschool/Paint_wall_seamless_2 [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 ( 0 432 16 ) ( 0 432 17 ) ( 1 432 16 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
 ( 0 432 16 ) ( 1 432 16 ) ( 0 433 16 ) oldschool/Paint_wall_seamless_2 [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 ( 272 448 144 ) ( 272 449 144 ) ( 273 448 144 ) oldschool/Paint_wall_seamless_2 [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
@@ -683,10 +683,10 @@
 // brush 5
 {
 ( 720 720 208 ) ( 720 -176 16 ) ( 720 720 16 ) oldschool/Paint_wall_seamless_2 [ -6.123233995736766e-17 -1 0 -220 ] [ 0 0 -1 0 ] 0 0.8 0.8
-( 736 0 208 ) ( 720 0 16 ) ( 720 0 208 ) oldschool/Paint_wall_seamless_2 [ 1 -6.123233995736766e-17 0 104 ] [ 0 0 -1 0 ] 0 0.8 0.8
+( 736 -16 208 ) ( 720 -16 16 ) ( 720 -16 208 ) oldschool/Paint_wall_seamless_2 [ 1 -6.123233995736766e-17 0 104 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( 720 720 16 ) ( 736 -176 16 ) ( 736 720 16 ) oldschool/Paint_wall_seamless_2 [ -6.123233995736766e-17 -1 0 -220 ] [ 1 -6.123233995736766e-17 0 104 ] 90 0.8 0.8
 ( 720 720 144 ) ( 736 -176 144 ) ( 720 -176 144 ) oldschool/Paint_wall_seamless_2 [ 6.123233995736766e-17 1 0 220 ] [ 1 -6.123233995736766e-17 0 104 ] 270 0.8 0.8
-( 720 528 208 ) ( 736 528 16 ) ( 736 528 208 ) oldschool/Paint_wall_seamless_2 [ -1 6.123233995736766e-17 0 -104 ] [ 0 0 -1 0 ] 0 0.8 0.8
+( 720 544 208 ) ( 736 544 16 ) ( 736 544 208 ) oldschool/Paint_wall_seamless_2 [ -1 6.123233995736766e-17 0 -104 ] [ 0 0 -1 0 ] 0 0.8 0.8
 ( 736 720 208 ) ( 736 -176 16 ) ( 736 -176 208 ) oldschool/Paint_wall_seamless_2 [ 6.123233995736766e-17 1 0 220 ] [ 0 0 -1 0 ] 0 0.8 0.8
 }
 // brush 6
@@ -701,11 +701,11 @@
 // brush 7
 {
 ( 352 0 160 ) ( 352 32 160 ) ( 352 32 288 ) oldschool/Paint_wall_seamless [ 0 -1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
-( 0 0 144 ) ( 0 0 145 ) ( 1 0 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 0 -16 144 ) ( 0 -16 145 ) ( 1 -16 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 0 0 144 ) ( 1 0 144 ) ( 0 1 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 896 160 ) ( 896 897 160 ) ( 897 896 160 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 576 160 ) ( 897 576 160 ) ( 896 576 161 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
-( 720 896 160 ) ( 720 896 161 ) ( 720 897 160 ) oldschool/Paint_wall_seamless [ 0 1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 736 896 160 ) ( 736 896 161 ) ( 736 897 160 ) oldschool/Paint_wall_seamless [ 0 1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 }
 // brush 8
 {

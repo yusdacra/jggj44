@@ -8,4 +8,3 @@ sky_material = SubResource("ProceduralSkyMaterial_ofob8")
 [resource]
 background_mode = 2
 sky = SubResource("Sky_ffl62")
-ambient_light_source = 3
