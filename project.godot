@@ -53,6 +53,10 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/dictionary_inspector/plugin.cfg", "res://addons/func_godot/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg", "res://addons/loggie/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [gui]
 
 theme/custom="res://resources/themes/theme-minimal.tres"

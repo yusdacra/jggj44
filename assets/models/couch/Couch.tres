@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0rtdmjvw2htr"]
+
+[resource]
+resource_name = "CouchBase"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.803919, 0.701961, 0.611765, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+texture_filter = 4

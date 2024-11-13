@@ -15,6 +15,7 @@ func _ready() -> void:
 	# find ui layer
 	Scenes.change_finished.connect(
 		func(scene: Node):
+			scene.player = self
 			ui_layer = scene.ui_layer
 			get_tree().process_frame.connect(_check_interactable),
 		CONNECT_ONE_SHOT,

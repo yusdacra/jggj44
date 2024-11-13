@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cqjd7nutell7g"]
+
+[ext_resource type="Texture2D" uid="uid://1tmc6l00yphy" path="res://assets/textures/glass_thick.png" id="1_oipar"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_oipar")
+metallic_specular = 0.0
+texture_filter = 4

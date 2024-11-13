@@ -26,7 +26,7 @@ extends Node
 #@export var CROUCH_ANIMATION : AnimationPlayer
 #@export var COLLISION_MESH : CollisionShape3D
 
-@onready var HEAD = get_node("../" + head_path)
+@onready var HEAD = get_node("../Neck/" + head_path)
 
 
 func _ready():

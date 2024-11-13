@@ -36,7 +36,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
+tracks/2/path = NodePath("Neck/Head:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -76,7 +76,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Head:position")
+tracks/2/path = NodePath("Neck/Head:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -296,12 +296,14 @@ MarginContainer/constants/margin_top = 10
 [sub_resource type="SphereShape3D" id="SphereShape3D_k4wwl"]
 
 [node name="Character" type="CharacterBody3D" node_paths=PackedStringArray("HEAD", "CAMERA", "HEADBOB_ANIMATION", "JUMP_ANIMATION", "CROUCH_ANIMATION", "COLLISION_MESH")]
+floor_stop_on_slope = false
+floor_snap_length = 0.0
 script = ExtResource("1_0t4e8")
 default_reticle = "res://addons/fpc/reticles/reticle_1.tscn"
-HEAD = NodePath("Head")
-CAMERA = NodePath("Head/Camera")
-HEADBOB_ANIMATION = NodePath("Head/HeadbobAnimation")
-JUMP_ANIMATION = NodePath("Head/JumpAnimation")
+HEAD = NodePath("Neck/Head")
+CAMERA = NodePath("Neck/Head/Camera")
+HEADBOB_ANIMATION = NodePath("Neck/Head/HeadbobAnimation")
+JUMP_ANIMATION = NodePath("Neck/Head/JumpAnimation")
 CROUCH_ANIMATION = NodePath("CrouchAnimation")
 COLLISION_MESH = NodePath("Collision")
 
@@ -314,24 +316,27 @@ libraries = {
 "": SubResource("AnimationLibrary_5e5t5")
 }
 
-[node name="Head" type="Node3D" parent="."]
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+
+[node name="Head" type="Node3D" parent="Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Camera" type="Camera3D" parent="Head"]
+[node name="Camera" type="Camera3D" parent="Neck/Head"]
 
-[node name="InteractCast" type="RayCast3D" parent="Head/Camera"]
+[node name="InteractCast" type="RayCast3D" parent="Neck/Head/Camera"]
 unique_name_in_owner = true
 target_position = Vector3(0, 0, -1.5)
 collision_mask = 3
 collide_with_areas = true
 
-[node name="HeadbobAnimation" type="AnimationPlayer" parent="Head"]
+[node name="HeadbobAnimation" type="AnimationPlayer" parent="Neck/Head"]
 libraries = {
 "": SubResource("AnimationLibrary_o0unb")
 }
 blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"walk", 0.5, &"walk", &"RESET", 0.5]
 
-[node name="JumpAnimation" type="AnimationPlayer" parent="Head"]
+[node name="JumpAnimation" type="AnimationPlayer" parent="Neck/Head"]
 libraries = {
 "": SubResource("AnimationLibrary_qeg5r")
 }
