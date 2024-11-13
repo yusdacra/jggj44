@@ -46,7 +46,9 @@ window/stretch/aspect="expand"
 
 [editor]
 
+movie_writer/mjpeg_quality=0.7
 movie_writer/movie_file="C:/Users/dusk/Documents/jggj44/recorded.avi"
+movie_writer/fps=30
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://b3pgt7wvlirpc"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_orexm"]
+[ext_resource type="PackedScene" uid="uid://ol63a7j4lc2i" path="res://scenes/spot_light.tscn" id="1_x4t73"]
+
+[resource]
+script = ExtResource("1_orexm")
+scene_file = ExtResource("1_x4t73")
+apply_rotation_on_map_build = false
+classname = "Spotlight"
+description = "Spotlight"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"spot_angle": 45.0,
+"spot_energy": 1.0,
+"spot_range": 10.0
+}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.986694, 1, 0.574219, 1),
+"size": AABB(-2, -2, -4, 2, 2, 4)
+}
+node_class = ""
+name_property = ""

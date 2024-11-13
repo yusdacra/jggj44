@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=5 format=3 uid="uid://c065vq5abao5u"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=6 format=3 uid="uid://c065vq5abao5u"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_dcvlx"]
 [ext_resource type="Resource" uid="uid://doqevwtgpsyb7" path="res://maps/entities/info_tp.tres" id="3_55oq3"]
+[ext_resource type="Resource" uid="uid://b3pgt7wvlirpc" path="res://maps/entities/info_spot_light.tres" id="4_k4406"]
 [ext_resource type="Resource" uid="uid://y3bfbiw1gnct" path="res://maps/entities/info_player_spawn.tres" id="7_fq8hn"]
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="8_l50fi"]
 
@@ -11,4 +12,4 @@ export_file = false
 target_map_editor = 1
 fgd_name = "FuncGodot"
 base_fgd_files = Array[Resource]([ExtResource("1_dcvlx")])
-entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3")])
+entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3"), ExtResource("4_k4406")])

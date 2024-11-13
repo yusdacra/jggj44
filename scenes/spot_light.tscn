@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ol63a7j4lc2i"]
+
+[sub_resource type="GDScript" id="GDScript_brwgk"]
+resource_name = "spotlight"
+script/source = "@tool
+extends SpotLight3D
+
+@export var func_godot_properties: Dictionary:
+	set(new_dict):
+		func_godot_properties = new_dict
+		_set_props()
+
+func _set_props() -> void:
+	light_energy = func_godot_properties[\"spot_energy\"]
+	spot_angle = func_godot_properties[\"spot_angle\"]
+	spot_range = func_godot_properties[\"spot_range\"]
+"
+
+[node name="SpotLight" type="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_color = Color(1, 1, 0.870588, 1)
+light_energy = 1.2
+shadow_enabled = true
+spot_range = 10.0
+spot_attenuation = 0.4
+spot_angle = 68.0
+script = SubResource("GDScript_brwgk")

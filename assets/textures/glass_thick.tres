@@ -3,6 +3,8 @@
 [ext_resource type="Shader" path="res://assets/shaders/frosted_glass.gdshader" id="2_2p7ft"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_2vj8w"]
+noise_type = 4
+seed = 52
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vqg5a"]
 seamless = true
