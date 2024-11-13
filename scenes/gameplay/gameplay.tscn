@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://4fyoq8npekf0"]
+[gd_scene load_steps=24 format=4 uid="uid://4fyoq8npekf0"]
 
 [ext_resource type="PackedScene" uid="uid://barl4q1kugrmm" path="res://scenes/gameplay/pause-layer/pause-layer.tscn" id="2"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="3_katyf"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dn0ecemmcrw7r" path="res://assets/sprites/flowerpot.png" id="10_5i75x"]
 [ext_resource type="PackedScene" uid="uid://bvdrbttoqafwf" path="res://interactable/dialogue_trigger/dialogue_trigger.tscn" id="11_vsvkj"]
 [ext_resource type="Resource" uid="uid://bvyoxs713fxvd" path="res://dialogue/test.dialogue" id="12_5xuwh"]
+[ext_resource type="Texture2D" uid="uid://c5s74op1eyqnh" path="res://assets/sprites/question_bubble.png" id="14_3dmrl"]
+[ext_resource type="Script" path="res://dialogue/all_dialogue.gd" id="15_odx53"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_r48hg"]
 _surfaces = [{
@@ -125,10 +127,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02797, 0.899829, 8.09593)
 
 [node name="Objects" type="Node" parent="."]
 
-[node name="DialogueTrigger" parent="Objects" instance=ExtResource("11_vsvkj")]
-dialogue = ExtResource("12_5xuwh")
-dialogue_title = "test_diag"
-
 [node name="FlowerPot" type="Sprite3D" parent="Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1.4, 3.5)
 pixel_size = 0.006
@@ -137,3 +135,23 @@ shaded = true
 double_sided = false
 texture_filter = 4
 texture = ExtResource("10_5i75x")
+
+[node name="DialogueTrigger" parent="Objects/FlowerPot" instance=ExtResource("11_vsvkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+dialogue = ExtResource("12_5xuwh")
+dialogue_title = "test_diag"
+
+[node name="QuestionBubble" type="Sprite3D" parent="Objects" node_paths=PackedStringArray("dialogue_trigger")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.7, 11.5)
+pixel_size = 0.06
+billboard = 2
+shaded = true
+double_sided = false
+texture_filter = 4
+texture = ExtResource("14_3dmrl")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+script = ExtResource("15_odx53")
+dialogue_trigger = NodePath("DialogueTrigger")
+
+[node name="DialogueTrigger" parent="Objects/QuestionBubble" instance=ExtResource("11_vsvkj")]

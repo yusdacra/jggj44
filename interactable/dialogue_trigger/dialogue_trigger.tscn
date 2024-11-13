@@ -6,7 +6,6 @@
 size = Vector3(0.8, 0.8, 0.8)
 
 [node name="DialogueTrigger" type="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 1.5, 3.5)
 script = ExtResource("1_wmcnd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
