@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://c2gocuhw2o7py"]
+[gd_scene load_steps=8 format=4 uid="uid://c2gocuhw2o7py"]
 
+[ext_resource type="Texture2D" uid="uid://pqdrhl2l3jli" path="res://assets/menu_art.png" id="2_ep8nk"]
 [ext_resource type="Script" path="res://scenes/menu/game_version.gd" id="4_3hod2"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="5"]
 [ext_resource type="Script" path="res://scenes/menu/godot_version.gd" id="5_fdyjp"]
@@ -66,14 +67,15 @@ script = ExtResource("5")
 btn_play = NodePath("MarginContainer/GameMenu/PlayButton")
 btn_exit = NodePath("MarginContainer/GameMenu/ExitButton")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.176471, 0.682353, 0.647059, 1)
+texture = ExtResource("2_ep8nk")
+expand_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -82,10 +84,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 36
 
 [node name="GameMenu" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
