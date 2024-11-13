@@ -30,6 +30,8 @@ var light_intensity: float = 100.0: # start at 100, between 0 and 200
 		Loggie.info("light intensity changed to %s" % light_intensity)
 		update_bgm_layer()
 
+var tp_points: Dictionary = {}
+
 # `pre_start()` is called when a scene is loaded.
 # Use this function to receive params from `Game.change_scene(params)`.
 func pre_start(params):

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://doqevwtgpsyb7"]
+
+[ext_resource type="PackedScene" uid="uid://b61fmijfqsi1j" path="res://interactable/tp_point/tp_point.tscn" id="1_kb6ni"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_u5r6t"]
+
+[resource]
+script = ExtResource("1_u5r6t")
+scene_file = ExtResource("1_kb6ni")
+apply_rotation_on_map_build = true
+classname = "TP_Point"
+description = "A teleport point."
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"destination": "",
+"tag": "my_tp_point"
+}
+class_property_descriptions = {
+"destination": "Which TP point to teleport to.",
+"tag": "The name of this TP point."
+}
+meta_properties = {
+"color": Color(0.171875, 0.883545, 1, 1),
+"size": AABB(-6.3, -16, -16, 6.3, 16, 16)
+}
+node_class = ""
+name_property = ""

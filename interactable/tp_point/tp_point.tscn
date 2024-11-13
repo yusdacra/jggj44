@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b61fmijfqsi1j"]
+
+[ext_resource type="Script" path="res://interactable/tp_point/tp_point.gd" id="1_1u4vx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fi4gm"]
+size = Vector3(1, 1, 0.4)
+
+[node name="TpPoint" type="Area3D"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_1u4vx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fi4gm")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+enabled = false
+target_position = Vector3(0, -100, 0)
