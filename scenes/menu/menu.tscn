@@ -170,5 +170,7 @@ theme_type_variation = &"LabelSmall"
 theme_override_colors/font_color = Color(0.886275, 0.87451, 0.87451, 1)
 text = "Developer 3"
 
+[connection signal="mouse_entered" from="MarginContainer/GameMenu/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/GameMenu/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/GameMenu/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/GameMenu/ExitButton" to="." method="_on_ExitButton_pressed"]

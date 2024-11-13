@@ -704,7 +704,7 @@
 ( 0 -16 144 ) ( 0 -16 145 ) ( 1 -16 144 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 0 0 144 ) ( 1 0 144 ) ( 0 1 144 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
 ( 896 896 160 ) ( 896 897 160 ) ( 897 896 160 ) oldschool/Paint_wall_seamless [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 0.8 0.8
-( 896 576 160 ) ( 897 576 160 ) ( 896 576 161 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
+( 896 544 160 ) ( 897 544 160 ) ( 896 544 161 ) oldschool/Paint_wall_seamless [ -1 0 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 ( 736 896 160 ) ( 736 896 161 ) ( 736 897 160 ) oldschool/Paint_wall_seamless [ 0 1 0 0 ] [ 0 0 -1 112 ] 0 0.8 0.8
 }
 // brush 8

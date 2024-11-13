@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode shadows_disabled;
+render_mode shadows_disabled, unshaded;
 
 uniform float distortion_size = 0.4;
 uniform sampler2D glass;

@@ -15,6 +15,7 @@ func _on_PlayButton_pressed() -> void:
 	var params = {
 		"show_progress_bar": false,
 	}
+	VfxLayer.set_chaos(32.0)
 	Game.change_scene_to_file("res://scenes/gameplay/gameplay.tscn", params)
 
 
@@ -26,3 +27,11 @@ func _on_ExitButton_pressed() -> void:
 		await transitions.anim.animation_finished
 		await get_tree().create_timer(0.3).timeout
 	get_tree().quit()
+
+
+func _on_play_button_mouse_entered() -> void:
+	VfxLayer.set_chaos(8.0)
+
+
+func _on_exit_button_mouse_entered() -> void:
+	VfxLayer.set_chaos(8.0)
