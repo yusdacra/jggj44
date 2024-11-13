@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b20skdkpgb08l"]
+
+[ext_resource type="Texture2D" uid="uid://de7mplgeklfri" path="res://assets/textures/glass.png" id="1_7r4ou"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_7r4ou")
+metallic_specular = 0.0

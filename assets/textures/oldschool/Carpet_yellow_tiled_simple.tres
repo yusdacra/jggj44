@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://iso37nxhlfty"]
+
+[ext_resource type="Texture2D" uid="uid://15qln4eflshw" path="res://assets/textures/oldschool/Carpet_yellow_tiled_simple.png" id="1_w60dh"]
+
+[resource]
+albedo_texture = ExtResource("1_w60dh")
+metallic_specular = 0.0
+texture_filter = 4

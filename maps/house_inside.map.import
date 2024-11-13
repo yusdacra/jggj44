@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://wfhosgucp0yq"
+path="res://.godot/imported/house_inside.map-22deb0c4c25b49b4baef4fe913c750c5.tres"
+
+[deps]
+
+source_file="res://maps/house_inside.map"
+dest_files=["res://.godot/imported/house_inside.map-22deb0c4c25b49b4baef4fe913c750c5.tres"]
+
+[params]
+

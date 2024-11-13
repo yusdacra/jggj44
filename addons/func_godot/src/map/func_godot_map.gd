@@ -38,6 +38,8 @@ var _map_file_internal: String = ""
 @export var block_until_complete: bool = false
 ## How many nodes to set the owner of, or add children of, at once. Higher values may lead to quicker build times, but a less responsive editor.
 @export var set_owner_batch_size: int = 1000
+## If true, automatically rebuilds the map when the local map file is reimported after being saved externally.
+@export var auto_build_on_local_map_update: bool = true
 
 # Build context variables
 var func_godot: FuncGodot = null
@@ -58,6 +60,20 @@ var entity_nodes: Array = []
 var entity_mesh_instances: Dictionary = {}
 var entity_occluder_instances: Dictionary = {}
 var entity_collision_shapes: Array = []
+
+func _ready() -> void:
+	if Engine.is_editor_hint():
+		EditorInterface.get_resource_filesystem().resources_reimported.connect(_on_reimport)
+		if auto_build_on_local_map_update:
+			verify_and_build()
+
+func _on_reimport(resources: PackedStringArray) -> void:
+	if !auto_build_on_local_map_update:
+		return
+	
+	for resource in resources:
+		if resource == local_map_file:
+			verify_and_build()
 
 # Utility
 ## Verify that FuncGodot is functioning and that [member map_file] exists. If so, build the map. If not, signal [signal build_failed]
