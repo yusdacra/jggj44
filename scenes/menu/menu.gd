@@ -30,8 +30,8 @@ func _on_ExitButton_pressed() -> void:
 
 
 func _on_play_button_mouse_entered() -> void:
-	VfxLayer.set_chaos(8.0)
+	VfxLayer.set_chaos(5.0)
 
 
 func _on_exit_button_mouse_entered() -> void:
-	VfxLayer.set_chaos(8.0)
+	VfxLayer.set_chaos(5.0)

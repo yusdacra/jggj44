@@ -1,41 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://x214aegqynyi"]
+[gd_scene load_steps=6 format=3 uid="uid://x214aegqynyi"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/ui-layer/ui_layer.gd" id="1_75wf1"]
 [ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://dialogue/balloon/dialogue_balloon.tscn" id="2_jaiav"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfgj3"]
+bg_color = Color(0, 0, 0, 0.196078)
+expand_margin_left = 8.0
+expand_margin_top = 16.0
+expand_margin_right = 8.0
+expand_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmrhl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t1i8p"]
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.588235)
+shadow_offset = Vector2(2, 2)
+
 [node name="UILayer" type="CanvasLayer"]
 script = ExtResource("1_75wf1")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -129.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/margin_left = 64
-theme_override_constants/margin_right = 64
-theme_override_constants/margin_bottom = 96
-
-[node name="InteractText" type="RichTextLabel" parent="MarginContainer"]
+[node name="InteractHint" type="MarginContainer" parent="."]
 unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -64.5
+offset_right = 115.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/margin_top = 64
+
+[node name="Panel" type="Panel" parent="InteractHint"]
 layout_mode = 2
-bbcode_enabled = true
-text = "[center]press F to interact with object"
-fit_content = true
-scroll_active = false
-shortcut_keys_enabled = false
-meta_underlined = false
-hint_underlined = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfgj3")
+
+[node name="Text" type="Label" parent="InteractHint"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wmrhl")
+text = "press F to interact with object"
+label_settings = SubResource("LabelSettings_t1i8p")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DialogueBalloon" parent="." instance=ExtResource("2_jaiav")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Overlay" type="ColorRect" parent="."]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
