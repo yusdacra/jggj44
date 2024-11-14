@@ -1,16 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://x214aegqynyi"]
+[gd_scene load_steps=7 format=3 uid="uid://x214aegqynyi"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/ui-layer/ui_layer.gd" id="1_75wf1"]
+[ext_resource type="Texture2D" uid="uid://sn0q3di8s1ai" path="res://assets/sprites/interact_bg.png" id="2_dy607"]
 [ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://dialogue/balloon/dialogue_balloon.tscn" id="2_jaiav"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfgj3"]
-bg_color = Color(0, 0, 0, 0.196078)
-expand_margin_left = 8.0
-expand_margin_top = 16.0
-expand_margin_right = 8.0
-expand_margin_bottom = 18.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o76x5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmrhl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmou0"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.196078)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_top = 4.0
+expand_margin_right = 8.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1i8p"]
 shadow_size = 8
@@ -33,21 +37,36 @@ offset_right = 115.0
 offset_bottom = 64.5
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/margin_top = 64
 
 [node name="Panel" type="Panel" parent="InteractHint"]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_rfgj3")
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o76x5")
 
-[node name="Text" type="Label" parent="InteractHint"]
+[node name="Bg" type="TextureRect" parent="InteractHint/Panel"]
+custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
+offset_left = -27.0
+offset_top = 0.5
+offset_right = 28.4082
+offset_bottom = 65.5
+size_flags_horizontal = 0
+texture = ExtResource("2_dy607")
+expand_mode = 3
+
+[node name="Text" type="Label" parent="InteractHint/Panel"]
+layout_mode = 2
+offset_top = 21.0
+offset_right = 230.0
+offset_bottom = 44.0
+grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_styles/normal = SubResource("StyleBoxEmpty_wmrhl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmou0")
 text = "press F to interact with object"
 label_settings = SubResource("LabelSettings_t1i8p")
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DialogueBalloon" parent="." instance=ExtResource("2_jaiav")]
