@@ -57,8 +57,8 @@ func _set_new_scene(resource: PackedScene):
 	get_tree().root.add_child(instanced_scn)  # triggers _ready
 	if instanced_scn.has_method("post_ready"):
 		await instanced_scn.post_ready(_params)
-	change_pre_finish.emit(instanced_scn)
 	get_tree().current_scene = instanced_scn
+	change_pre_finish.emit(instanced_scn)
 	if instanced_scn.has_method("pre_start"):
 		await instanced_scn.pre_start(_params)
 	if transitions:

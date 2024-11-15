@@ -4,7 +4,7 @@ class_name GameStateAutoload
 var player: Player = null:
 	set(new_player):
 		player = new_player
-		player_set.emit(player)
+		player_set.emit(new_player)
 
 var time: float = 0.0:
 	set(new_time):
