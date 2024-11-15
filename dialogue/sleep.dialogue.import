@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://30m3ikshxapo"
+path="res://.godot/imported/sleep.dialogue-f2f736c36d5bcc59968eb7f6198c2fc2.tres"
+
+[deps]
+
+source_file="res://dialogue/sleep.dialogue"
+dest_files=["res://.godot/imported/sleep.dialogue-f2f736c36d5bcc59968eb7f6198c2fc2.tres"]
+
+[params]
+
+defaults=true

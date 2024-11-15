@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://c7yml4d3h6wd2"]
+
+[ext_resource type="PackedScene" uid="uid://cc283fsoytnt0" path="res://interactable/leave_nightmare/leave_nightmare.tscn" id="1_ktnxq"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="2_wu1sp"]
+
+[resource]
+script = ExtResource("2_wu1sp")
+scene_file = ExtResource("1_ktnxq")
+apply_rotation_on_map_build = true
+classname = "nightmare_leave"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"model_name": "placeholder"
+}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.351563, 0.0535583, 0.151341, 1),
+"size": AABB(-16, -16, -16, 16, 16, 16)
+}
+node_class = ""
+name_property = ""

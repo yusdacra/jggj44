@@ -11,7 +11,7 @@ seamless = true
 noise = SubResource("FastNoiseLite_2vj8w")
 
 [resource]
-render_priority = 0
+render_priority = 2
 shader = ExtResource("2_2p7ft")
 shader_parameter/distortion_size = 0.6
 shader_parameter/glass = SubResource("NoiseTexture2D_vqg5a")

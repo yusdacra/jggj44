@@ -7,11 +7,11 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o76x5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmou0"]
-bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0.196078)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+bg_color = Color(0.14902, 0.356863, 0.392157, 0.117647)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 expand_margin_top = 4.0
 expand_margin_right = 8.0
 expand_margin_bottom = 4.0
@@ -22,6 +22,7 @@ shadow_color = Color(0, 0, 0, 0.588235)
 shadow_offset = Vector2(2, 2)
 
 [node name="UILayer" type="CanvasLayer"]
+layer = 8
 script = ExtResource("1_75wf1")
 
 [node name="InteractHint" type="MarginContainer" parent="."]

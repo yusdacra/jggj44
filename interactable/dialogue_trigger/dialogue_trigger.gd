@@ -17,7 +17,7 @@ func _on_interact(player: Player) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	enabled = false
 	player.controller.immobile = true
-	ui_layer.show_dialogue(dialogue, dialogue_title)
+	UILayer.show_dialogue(dialogue, dialogue_title)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_end.bind(player), CONNECT_ONE_SHOT)
 
 func _on_dialogue_end(d: DialogueResource, player: Player):

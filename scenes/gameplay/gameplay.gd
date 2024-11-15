@@ -1,9 +1,6 @@
 extends Node
 class_name Gameplay
 
-@export var player: Player
-@export var ui_layer: UiLayer
-
 @export var intensity_music_layers: Dictionary = {
 	0.0: "dark_three",
 	25.0: "dark_two",
@@ -19,31 +16,22 @@ class_name Gameplay
 	180.0: "night",
 }
 
-var time: float = 0.0:
-	set(new_time):
-		time = fmod(new_time, 360.0) # rolls over after night
-		Loggie.info("time changed to %s" % time)
-		update_bgm_layer()
-var light_intensity: float = 100.0: # start at 100, between 0 and 200
-	set(new_intensity):
-		light_intensity = new_intensity
-		Loggie.info("light intensity changed to %s" % light_intensity)
-		update_bgm_layer()
-
 var tp_points: Dictionary = {}
+var sp_lights: Dictionary = {}
 
-# `pre_start()` is called when a scene is loaded.
-# Use this function to receive params from `Game.change_scene(params)`.
-func pre_start(params):
-	var cur_scene: Node = get_tree().current_scene
-	Loggie.info("Scene pre start: %s (%s)" % [cur_scene.name, cur_scene.scene_file_path])
-	for map: Node3D in %Maps.get_children():
-		if not map.visible: map.queue_free()
+func post_ready(params: Dictionary):
+	for map: Node3D in %Maps.get_children(): if not map.visible: map.queue_free()
 
 
-# `start()` is called after pre_start and after the graphic transition ends.
-func start():
+func pre_start(params: Dictionary):
+	if params.get("left_nightmare", false):
+		GameState.player.controller.global_position = %NightmareLeaveSpawn.global_position
+		GameState.player.controller.HEAD.rotation = %NightmareLeaveSpawn.global_rotation
+
+func start(params):
 	update_bgm_layer()
+	GameState.time_changed.connect(func(x): update_bgm_layer())
+	GameState.light_intensity_changed.connect(func(x): update_bgm_layer())
 
 
 func update_bgm_layer():
@@ -51,7 +39,7 @@ func update_bgm_layer():
 	intensity_layer_levels.sort()
 	var intensity_layer_suffix: String = intensity_music_layers[intensity_layer_levels[0]]
 	for level: float in intensity_layer_levels:
-		if light_intensity >= level:
+		if GameState.light_intensity >= level:
 			intensity_layer_suffix = intensity_music_layers[level]
 			continue
 		else:
@@ -60,7 +48,7 @@ func update_bgm_layer():
 	time_layer_levels.sort()
 	var time_layer_prefix: String = time_music_layers[time_layer_levels[0]]
 	for level: float in time_layer_levels:
-		if time >= level:
+		if GameState.time >= level:
 			time_layer_prefix = time_music_layers[level]
 			continue
 		else:

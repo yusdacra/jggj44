@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://ol63a7j4lc2i"]
+[gd_scene load_steps=4 format=3 uid="uid://ol63a7j4lc2i"]
+
+[ext_resource type="Material" uid="uid://cmr4jvl36xyct" path="res://assets/textures/light.tres" id="1_338nu"]
 
 [sub_resource type="GDScript" id="GDScript_brwgk"]
 resource_name = "spotlight"
@@ -9,12 +11,29 @@ extends SpotLight3D
 	set(new_dict):
 		func_godot_properties = new_dict
 		_set_props()
+var on_energy := 1.0
 
-func _set_props() -> void:
-	light_energy = func_godot_properties[\"spot_energy\"]
+func _ready() -> void:
+	if not Engine.is_editor_hint():
+		Scenes.change_pre_finish.connect(func(scene): _set_props(scene), CONNECT_ONE_SHOT)
+		get_tree().process_frame.connect(
+			func():
+				if Engine.get_process_frames() % 5:
+					%Bulb.visible = not is_zero_approx(light_energy)
+		)
+
+func _set_props(scene: Node = null) -> void:
+	light_energy = func_godot_properties[\"spot_energy\"]; on_energy = light_energy
 	spot_angle = func_godot_properties[\"spot_angle\"]
 	spot_range = func_godot_properties[\"spot_range\"]
+	if not Engine.is_editor_hint() and scene != null:
+		scene.sp_lights[func_godot_properties[\"tag\"]] = self
 "
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kakx8"]
+material = ExtResource("1_338nu")
+radius = 0.1
+height = 0.4
 
 [node name="SpotLight" type="SpotLight3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
@@ -25,3 +44,10 @@ spot_range = 10.0
 spot_attenuation = 0.4
 spot_angle = 68.0
 script = SubResource("GDScript_brwgk")
+
+[node name="Bulb" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -8.74228e-09, 0.2)
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("CapsuleMesh_kakx8")

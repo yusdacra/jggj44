@@ -102,8 +102,8 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	# If the controller is rotated in a certain direction for game design purposes, redirect this rotation into the head.
-	HEAD.rotation.y = rotation.y
-	rotation.y = 0
+	#HEAD.rotation.y = rotation.y
+	#rotation.y = 0
 	
 	if default_reticle:
 		change_reticle(default_reticle)

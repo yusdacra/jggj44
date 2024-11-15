@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://de7mplgeklfri" path="res://assets/textures/glass.png" id="1_7r4ou"]
 
 [resource]
+render_priority = 2
 transparency = 1
 blend_mode = 1
 albedo_texture = ExtResource("1_7r4ou")

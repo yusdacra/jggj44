@@ -27,4 +27,8 @@ Flower Pot: [[Hi|Hello|Howdy]], I'm a flower pot.
 		set Scenes.current.light_intensity = 150.0
 	- Light 3
 		set Scenes.current.light_intensity = 175.0
+- Nightmare level
+	Flower Pot: Which one?
+	- 1
+		do GameState.change_to_nightmare("1")
 => END

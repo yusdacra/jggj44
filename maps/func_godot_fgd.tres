@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=6 format=3 uid="uid://c065vq5abao5u"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=9 format=3 uid="uid://c065vq5abao5u"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_dcvlx"]
 [ext_resource type="Resource" uid="uid://doqevwtgpsyb7" path="res://maps/entities/info_tp.tres" id="3_55oq3"]
 [ext_resource type="Resource" uid="uid://b3pgt7wvlirpc" path="res://maps/entities/info_spot_light.tres" id="4_k4406"]
+[ext_resource type="Resource" uid="uid://cys1c8foka3od" path="res://maps/entities/info_nightmare_platform.tres" id="5_tk213"]
+[ext_resource type="Resource" uid="uid://c7yml4d3h6wd2" path="res://maps/entities/info_nightmare_leave.tres" id="6_0ktc1"]
+[ext_resource type="Resource" uid="uid://ei2jjbd53827" path="res://maps/entities/info_light_switch.tres" id="7_ele64"]
 [ext_resource type="Resource" uid="uid://y3bfbiw1gnct" path="res://maps/entities/info_player_spawn.tres" id="7_fq8hn"]
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="8_l50fi"]
 
@@ -12,4 +15,4 @@ export_file = false
 target_map_editor = 1
 fgd_name = "FuncGodot"
 base_fgd_files = Array[Resource]([ExtResource("1_dcvlx")])
-entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3"), ExtResource("4_k4406")])
+entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3"), ExtResource("4_k4406"), ExtResource("5_tk213"), ExtResource("6_0ktc1"), ExtResource("7_ele64")])

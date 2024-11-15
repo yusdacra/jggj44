@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bja1hwstg7tyi"]
+
+[ext_resource type="Script" path="res://interactable/curtain/curtain.gd" id="1_0nqdb"]
+[ext_resource type="PackedScene" uid="uid://crg6e6q124g1t" path="res://assets/models/curtain/closed_partial.fbx" id="1_eck8r"]
+[ext_resource type="PackedScene" uid="uid://ul7tbw7hqv62" path="res://assets/models/curtain/open.fbx" id="2_nxwhh"]
+[ext_resource type="PackedScene" uid="uid://col2q62ehx76y" path="res://assets/models/curtain/closed.fbx" id="3_qpw6i"]
+
+[node name="curtain" type="Node3D"]
+script = ExtResource("1_0nqdb")
+
+[node name="partially_open" parent="." instance=ExtResource("1_eck8r")]
+
+[node name="open" parent="." instance=ExtResource("2_nxwhh")]
+visible = false
+
+[node name="closed" parent="." instance=ExtResource("3_qpw6i")]
+visible = false

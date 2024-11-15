@@ -9,6 +9,6 @@ uniform sampler2D depth_texture : source_color, hint_depth_texture;
 
 void fragment() {
 	vec2 d = texture(glass, UV).xy - vec2(0.5);
-	ALBEDO = texture(SCREEN_TEXTURE, SCREEN_UV + d * sqrt(texture(depth_texture, UV).r) * distortion_size).rgb * 0.9 + vec3(0.1);
+	ALBEDO = texture(SCREEN_TEXTURE, SCREEN_UV + d * sqrt(texture(depth_texture, UV).r) * distortion_size).rgb * 0.9 + vec3(0.02);
 	ALPHA = 0.99;
 }

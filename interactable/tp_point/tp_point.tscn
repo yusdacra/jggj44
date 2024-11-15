@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://interactable/tp_point/tp_point.gd" id="1_1u4vx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fi4gm"]
-size = Vector3(1, 1, 0.4)
+size = Vector3(1.2, 1.2, 0.4)
 
 [node name="TpPoint" type="Area3D"]
 collision_layer = 2

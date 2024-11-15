@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://blc0f43ypgnsv"]
+
+[ext_resource type="Script" path="res://interactable/light_switch/light_switch_trigger.gd" id="1_cdscs"]
+[ext_resource type="PackedScene" uid="uid://dexv0ugeffb13" path="res://interactable/light_switch/light_switch.tscn" id="2_dc61i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8a2b"]
+size = Vector3(0.4, 0.4, 0.2)
+
+[node name="LightSwitch" type="Area3D" node_paths=PackedStringArray("light_switch")]
+monitoring = false
+script = ExtResource("1_cdscs")
+light_switch = NodePath("light_switch")
+
+[node name="light_switch" parent="." instance=ExtResource("2_dc61i")]
+transform = Transform3D(-0.16, 0, -1.39876e-08, 0, 0.16, 0, 1.39876e-08, 0, -0.16, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.76837e-07, 0, 0)
+shape = SubResource("BoxShape3D_m8a2b")

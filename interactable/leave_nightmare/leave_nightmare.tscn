@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc283fsoytnt0"]
+
+[ext_resource type="Script" path="res://interactable/leave_nightmare/leave_nightmare.gd" id="1_yy58i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n8v7b"]
+
+[node name="LeaveNightmare" type="Area3D"]
+script = ExtResource("1_yy58i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_n8v7b")

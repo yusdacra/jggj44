@@ -13,21 +13,20 @@ class_name TpPoint
 @onready var ground_ray: RayCast3D = %RayCast3D
 
 func _ready() -> void:
-	super()
 	Scenes.change_finished.connect(
 		func(scene: Node):
 			scene.tp_points[func_godot_properties["tag"]] = self,
 		CONNECT_ONE_SHOT,
 	)
-
 func _on_interact(player: Player) -> void:
 	player.controller.immobile = true
 	player.can_interact = false
-	ui_layer.show_overlay()
+	UILayer.show_overlay()
+
 	get_tree().create_timer(fade_duration).timeout.connect(
 		func():
 			_tp_to_destination(player)
-			ui_layer.hide_overlay()
+			UILayer.hide_overlay()
 			player.controller.immobile = false
 			player.can_interact = true
 	)
@@ -42,4 +41,4 @@ func _tp_to_destination(player: Player) -> void:
 	player.controller.global_position = dest.global_position
 
 func _on_interact_hover(player: Player) -> void:
-	ui_layer.show_interact_text("press F to enter")
+	UILayer.show_interact_text("press F to enter")

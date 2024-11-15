@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqvraug5gdp1b"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_jns8h"]
+[ext_resource type="Script" path="res://scenes/gameplay/nightmare/nightmare.gd" id="1_r5p53"]
+[ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_mubw2"]
+[ext_resource type="PackedScene" uid="uid://ss2al3n7fjl5" path="res://scenes/gameplay/nightmare/stars.tscn" id="9_pso7p"]
+
+[sub_resource type="Environment" id="Environment_lkwr8"]
+
+[node name="Nightmare" type="Node3D"]
+script = ExtResource("1_r5p53")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lkwr8")
+
+[node name="Maps" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="1" type="Node3D" parent="Maps"]
+
+[node name="Map" type="Node3D" parent="Maps/1"]
+script = ExtResource("1_jns8h")
+local_map_file = "res://maps/nightmare1.map"
+map_settings = ExtResource("2_mubw2")
+
+[node name="Stars" parent="Maps/1" instance=ExtResource("9_pso7p")]
+
+[node name="DeathTp" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -6, 6)

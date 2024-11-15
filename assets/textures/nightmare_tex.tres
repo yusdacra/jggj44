@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bqf8qs0kuseq6"]
+
+[ext_resource type="Shader" path="res://assets/shaders/object_outline.gdshader" id="1_g8kwq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ucm18"]
+render_priority = 0
+shader = ExtResource("1_g8kwq")
+shader_parameter/normal_threshold = 0.1
+shader_parameter/depth_threshold = 0.05
+shader_parameter/depth_artifact_correction_coef = 2.0
+shader_parameter/outline_color = Color(2, 2, 2, 1)
+
+[resource]
+next_pass = SubResource("ShaderMaterial_ucm18")
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 2
+albedo_color = Color(0, 0, 0, 1)

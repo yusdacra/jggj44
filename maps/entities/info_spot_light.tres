@@ -14,7 +14,8 @@ base_classes = Array[Resource]([])
 class_properties = {
 "spot_angle": 45.0,
 "spot_energy": 1.0,
-"spot_range": 10.0
+"spot_range": 10.0,
+"tag": "my_light"
 }
 class_property_descriptions = {}
 meta_properties = {

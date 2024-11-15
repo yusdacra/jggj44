@@ -9,6 +9,7 @@
 extends Node
 
 signal change_started(scene_path: String, params: Dictionary)
+signal change_pre_finish(scene: Node)
 signal change_finished(scene: Node)
 
 var _params = {} # params caching
@@ -34,10 +35,13 @@ func _ready():
 		# call pre_start and start method to ensure compatibility with "Play Scene"
 		if not cur_scene.is_node_ready():
 			await cur_scene.ready
+		if cur_scene.has_method("post_ready"):
+			cur_scene.post_ready({})
+		change_pre_finish.emit(cur_scene)
 		if cur_scene.has_method("pre_start"):
 			cur_scene.pre_start({})
 		if cur_scene.has_method("start"):
-			cur_scene.start()
+			cur_scene.start({})
 	change_finished.emit(cur_scene)
 
 
@@ -51,6 +55,9 @@ func _set_new_scene(resource: PackedScene):
 	await current_scene.tree_exited  # wait for the current scene to be fully removed
 	var instanced_scn: Node = resource.instantiate()  # triggers _init
 	get_tree().root.add_child(instanced_scn)  # triggers _ready
+	if instanced_scn.has_method("post_ready"):
+		await instanced_scn.post_ready(_params)
+	change_pre_finish.emit(instanced_scn)
 	get_tree().current_scene = instanced_scn
 	if instanced_scn.has_method("pre_start"):
 		await instanced_scn.pre_start(_params)
@@ -59,7 +66,7 @@ func _set_new_scene(resource: PackedScene):
 	if transitions:
 		await transitions.anim.animation_finished
 	if instanced_scn.has_method("start"):
-		instanced_scn.start()
+		instanced_scn.start(_params)
 	change_finished.emit(instanced_scn)
 	_params = {}
 	_loading_start_time = 0

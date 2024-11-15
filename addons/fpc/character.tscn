@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cc1m2a1obsyn4"]
+[gd_scene load_steps=22 format=3 uid="uid://cc1m2a1obsyn4"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_0t4e8"]
+[ext_resource type="Shader" path="res://assets/shaders/psx.gdshader" id="2_ekkrv"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_v3ckk"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="3_x1wcc"]
 
@@ -91,6 +92,26 @@ _data = {
 "RESET": SubResource("Animation_j8cx7"),
 "crouch": SubResource("Animation_5ec5e")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j62vv"]
+render_priority = 0
+shader = ExtResource("2_ekkrv")
+shader_parameter/enable_fog = false
+shader_parameter/fog_color = Color(0.389287, 0.389287, 0.389287, 1)
+shader_parameter/noise_color = Color(0.779291, 0.779291, 0.779291, 1)
+shader_parameter/fog_distance = 100.0
+shader_parameter/fog_fade_range = 50.0
+shader_parameter/enable_noise = false
+shader_parameter/noise_time_fac = 4.0
+shader_parameter/enable_color_limitation = false
+shader_parameter/color_levels = 32
+shader_parameter/enable_dithering = true
+shader_parameter/dither_strength = 0.4
+
+[sub_resource type="QuadMesh" id="QuadMesh_q7hcm"]
+material = SubResource("ShaderMaterial_j62vv")
+flip_faces = true
+size = Vector2(2, 2)
 
 [sub_resource type="Animation" id="Animation_gh776"]
 resource_name = "RESET"
@@ -330,6 +351,14 @@ target_position = Vector3(0, 0, -2)
 collision_mask = 3
 hit_from_inside = true
 collide_with_areas = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Neck/Head/Camera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+cast_shadow = 0
+extra_cull_margin = 16384.0
+ignore_occlusion_culling = true
+gi_mode = 0
+mesh = SubResource("QuadMesh_q7hcm")
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Neck/Head"]
 libraries = {

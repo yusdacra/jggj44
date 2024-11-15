@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://ei2jjbd53827"]
+
+[ext_resource type="PackedScene" uid="uid://blc0f43ypgnsv" path="res://interactable/light_switch/light_switch_trigger.tscn" id="1_a7f3y"]
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_jwoiu"]
+
+[resource]
+script = ExtResource("1_jwoiu")
+scene_file = ExtResource("1_a7f3y")
+apply_rotation_on_map_build = true
+classname = "Light_Switch"
+description = "light switch that can target a light"
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"state": "open",
+"target": "my_light"
+}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.570313, 0.570313, 0.570313, 1),
+"size": AABB(-2, -4, -4, 2, 4, 4)
+}
+node_class = ""
+name_property = ""

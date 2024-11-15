@@ -22,6 +22,7 @@ func resume():
 
 
 func pause():
+	if Scenes.current.name == "Menu": return
 	%Resume.grab_focus()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().paused = true
@@ -33,4 +34,6 @@ func _on_Resume_pressed():
 
 
 func _on_main_menu_pressed():
+	resume()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	Game.change_scene_to_file("res://scenes/menu/menu.tscn", {"show_progress_bar": false})

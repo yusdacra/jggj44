@@ -6,12 +6,14 @@
 [resource]
 script = ExtResource("1_q04ca")
 scene_file = ExtResource("1_x1tit")
-apply_rotation_on_map_build = false
+apply_rotation_on_map_build = true
 classname = "Player"
 description = "Spawns a player at this position."
 func_godot_internal = false
 base_classes = Array[Resource]([])
-class_properties = {}
+class_properties = {
+"disable_quad": false
+}
 class_property_descriptions = {}
 meta_properties = {
 "color": Color(0.121094, 1, 0.320221, 1),

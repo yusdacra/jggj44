@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3 uid="uid://cys1c8foka3od"]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_noupb"]
+[ext_resource type="PackedScene" uid="uid://bfctsc78cg6ti" path="res://scenes/gameplay/nightmare/platform.tscn" id="1_vhq84"]
+
+[resource]
+script = ExtResource("1_noupb")
+scene_file = ExtResource("1_vhq84")
+apply_rotation_on_map_build = true
+classname = "nightmare_platform"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {}
+class_property_descriptions = {}
+meta_properties = {
+"color": Color(0.181607, 0.0535583, 0.351563, 1),
+"size": AABB(-19.2, -19.2, -8, 19.2, 19.2, 8)
+}
+node_class = ""
+name_property = ""

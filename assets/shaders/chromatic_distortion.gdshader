@@ -30,7 +30,7 @@ void vertex() {
 
 void fragment() {
     vec2 chaos_v = vec2(chaos, -chaos) * SCREEN_PIXEL_SIZE;
-    
+
     COLOR = vec4(
         texture(SCREEN_TEXTURE, SCREEN_UV + chaos_v * amount_r).r,
         texture(SCREEN_TEXTURE, SCREEN_UV + chaos_v * amount_g).g,
