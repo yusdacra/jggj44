@@ -1,0 +1,7 @@
+[gd_resource type="BoxMesh" load_steps=2 format=3 uid="uid://bfklnutby3kbu"]
+
+[ext_resource type="Material" uid="uid://bqf8qs0kuseq6" path="res://assets/textures/nightmare_tex.tres" id="1_qu1hy"]
+
+[resource]
+material = ExtResource("1_qu1hy")
+size = Vector3(1.6, 0.5, 1.6)

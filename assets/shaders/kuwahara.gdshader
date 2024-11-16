@@ -27,7 +27,7 @@ vec4 sobel(vec2 screen_size, vec2 uv)
 {
 	// Calculate Sobel to approximate structure tensor
 	vec2 d = screen_size.xy;
-	
+
 	vec3 sobel_x = (
 		1.0f * texture(_MainTex, uv + vec2(-d.x, -d.y)).rgb +
 		2.0f * texture(_MainTex, uv + vec2(-d.x,  0.0)).rgb +
@@ -44,7 +44,7 @@ vec4 sobel(vec2 screen_size, vec2 uv)
 		-2.0f * texture(_MainTex, uv + vec2( 0.0, d.y)).rgb +
 		-1.0f * texture(_MainTex, uv + vec2( d.x, d.y)).rgb
 		) / 4.0f;
-		
+
 	// Structure Tensor (4x4 matrix)
 	return vec4(dot(sobel_x, sobel_x), dot(sobel_y, sobel_y), dot(sobel_x, sobel_y), 1.0);
 }
@@ -53,37 +53,37 @@ vec4 blur(vec4 tensor, vec2 uv, vec2 d)
 {
 	// Gaussian Blur
 	int kernelRadius = 5;
-	
+
 	vec4 col = vec4(0.0);
 	float kernelSum = 0.0;
-	
+
 	// Blur x pass
 	for (int x = -kernelRadius; x <= kernelRadius; x++)
 	{
 		// Apply gaussian weights to current pixel color multiplied by tensor
 		vec4 c = tensor * texture(_MainTex, uv + vec2(float(x), 0.0) * d.xy);
 		float gauss = gaussian(2.0, float(x));
-		
+
 		// Return current pixel color multiplied by weight
 		col += c * gauss;
 		kernelSum += gauss;
 	}
-	
+
 	// Normalize color
 	col = col / kernelSum;
-	
+
 	// Blur y pass
 	for (int y = -kernelRadius; y <= kernelRadius; y++)
 	{
 		// Apply gaussian weights to current pixel color multiplied by tensor
 		vec4 c = tensor * texture(_MainTex, uv + vec2(0.0, float(y)) * d.xy);
 		float gauss = gaussian(2.0, float(y));
-		
+
 		// Return current pixel color multiplied by weight
 		col += c * gauss;
 		kernelSum += gauss;
 	}
-	
+
 	// Normalize color
 	return vec4(col / kernelSum);
 }
@@ -97,7 +97,7 @@ vec4 scaling_factor(vec4 t)
 	// Calculate and Normalize Eigenvector
 	vec2 v = vec2(lambda1 - t.x, -t.z);
 	vec2 n = vec2(0.0, 0.0);
-	
+
 	if (length(v) > 0.0)
 	{
 		n = normalize(v);
@@ -106,18 +106,18 @@ vec4 scaling_factor(vec4 t)
 	{
 		n = vec2(0.0, 1.0);
 	}
-	
+
 	// Angle relative to x-axis of Eigenvector
 	float phi = -atan(n.y / n.x);
-	
+
 	// Scaling Factor
 	float A = 0.0;
-	
+
 	if (lambda1 + lambda2 > 0.0)
 	{
 		A = (lambda1 - lambda2) / (lambda1 + lambda2);
 	}
-	
+
 	// Kernel deform factors
 	return vec4(n, phi, A);
 }
@@ -128,35 +128,35 @@ vec4 kuwahara(vec2 n, float phi, float A, vec2 d, vec2 uv)
 	int radius = _KernelSize / 2;
 	float a = float((radius)) * clamp((_Alpha + A) / _Alpha, 0.1, 2.0);
 	float b = float((radius)) * clamp(_Alpha / (_Alpha + A), 0.1, 2.0);
-	
+
 	// Displace kernel
 	float cos_phi = cos(phi);
 	float sin_phi = sin(phi);
-	
+
 	mat2 R = mat2(vec2(cos_phi, -sin_phi), vec2(sin_phi, cos_phi));
 	mat2 S = mat2(vec2(0.5 / a, 0.0), vec2(0.0, 0.5 / b));
-	
+
 	mat2 SR = matrixCompMult(S, R);
-	
-	
+
+
 	// Find kernel radius
 	int max_x = int(sqrt(a * a * cos_phi * cos_phi + b * b * sin_phi * sin_phi));
 	int max_y = int(sqrt(a * a * sin_phi * sin_phi + b * b * cos_phi * cos_phi));
-	
+
 	// Contrast threshold
 	float sinZeroCross = sin(_ZeroCrossing);
 	float eta = (_Zeta + cos(_ZeroCrossing)) / (sinZeroCross * sinZeroCross);
-	
+
 	// Initialize weighting matrices
 	vec4 m[8];
 	vec3 s[8];
-	
+
 	for (int k = 0; k < _N; k++)
 	{
 		m[k] = vec4(0.0);
 		s[k] = vec3(0.0);
 	}
-	
+
 	// Calculate Kuwahara filter weights
 	for (int y = -max_y; y <= max_y; y++)
 	{
@@ -171,40 +171,40 @@ vec4 kuwahara(vec2 n, float phi, float A, vec2 d, vec2 uv)
 				float sum = 0.0;
 				float w[8];
 				float z, vxx, vyy;
-				
+
 				// Polynomial Weights
 				vxx = _Zeta - eta * vec.x * vec.x;
 				vyy = _Zeta - eta * vec.y * vec.y;
-				z = max(0, vec.y + vxx); 
+				z = max(0, vec.y + vxx);
 				w[0] = z * z;
 				sum += w[0];
-				z = max(0, -vec.x + vyy); 
+				z = max(0, -vec.x + vyy);
 				w[2] = z * z;
 				sum += w[2];
-				z = max(0, -vec.y + vxx); 
+				z = max(0, -vec.y + vxx);
 				w[4] = z * z;
 				sum += w[4];
-				z = max(0, vec.x + vyy); 
+				z = max(0, vec.x + vyy);
 				w[6] = z * z;
 				sum += w[6];
 				vec = sqrt(2.0) / 2.0 * vec2(vec.x - vec.y, vec.x + vec.y);
 				vxx = _Zeta - eta * vec.x * vec.x;
 				vyy = _Zeta - eta * vec.y * vec.y;
-				z = max(0, vec.y + vxx); 
+				z = max(0, vec.y + vxx);
 				w[1] = z * z;
 				sum += w[1];
-				z = max(0, -vec.x + vyy); 
+				z = max(0, -vec.x + vyy);
 				w[3] = z * z;
 				sum += w[3];
-				z = max(0, -vec.y + vxx); 
+				z = max(0, -vec.y + vxx);
 				w[5] = z * z;
 				sum += w[5];
-				z = max(0, vec.x + vyy); 
+				z = max(0, vec.x + vyy);
 				w[7] = z * z;
 				sum += w[7];
-				
+
 				float g = exp(-3.125 * dot(vec, vec)) / sum;
-				
+
 				// Calculates polynomial weight
 				for (int k = 0; k < 8; k++)
 				{
@@ -215,10 +215,10 @@ vec4 kuwahara(vec2 n, float phi, float A, vec2 d, vec2 uv)
 			}
 		}
 	}
-	
+
 	// Calculates output color
 	vec4 output = vec4(0.0);
-    for (int k = 0; k < _N; ++k) 
+    for (int k = 0; k < _N; ++k)
 	{
     	m[k].rgb /= m[k].w;
 		s[k] = abs(s[k] / m[k].w - m[k].rgb * m[k].rgb);
@@ -232,7 +232,7 @@ vec4 kuwahara(vec2 n, float phi, float A, vec2 d, vec2 uv)
 	return clamp(output / output.w, 0.0, 1.0);
 }
 
-void fragment() 
+void fragment()
 {
 	vec4 tensor = sobel(SCREEN_PIXEL_SIZE, UV);
 	vec4 fac = scaling_factor(tensor);

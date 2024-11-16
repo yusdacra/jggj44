@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfctsc78cg6ti"]
 
-[ext_resource type="Material" uid="uid://bqf8qs0kuseq6" path="res://assets/textures/nightmare_tex.tres" id="1_pym7p"]
+[ext_resource type="BoxMesh" uid="uid://bfklnutby3kbu" path="res://assets/models/platform/simple.tres" id="1_pwjg0"]
 [ext_resource type="Script" path="res://scenes/gameplay/nightmare/platform.gd" id="2_4yk4c"]
+[ext_resource type="PackedScene" uid="uid://b5so5el4o8kaf" path="res://assets/models/platform/triprism.fbx" id="3_npt2e"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_s4x41"]
-material = ExtResource("1_pym7p")
-size = Vector3(1.6, 0.5, 1.6)
-
-[node name="Platform" type="MeshInstance3D"]
-mesh = SubResource("BoxMesh_s4x41")
+[node name="Platform" type="Node3D"]
 script = ExtResource("2_4yk4c")
+
+[node name="simple" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_pwjg0")
+
+[node name="triprism" parent="." instance=ExtResource("3_npt2e")]
+visible = false
