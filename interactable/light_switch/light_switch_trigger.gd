@@ -27,6 +27,7 @@ func _on_interact(player: Player):
 	match light_switch.state:
 		"open": target_light.light_energy = 0.0
 		"closed": target_light.light_energy = target_light.on_energy
+	Audio.play_sfx("LightSwitch")
 
 func _on_interact_hover(player: Player):
 	var act: String

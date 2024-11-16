@@ -1,5 +1,5 @@
 extends Node
-class_name MusicManager
+class_name AudioManager
 
 const MUTE_DB: float = -60.0
 
@@ -98,3 +98,6 @@ func transition_to(layer: String):
 		return
 	target_layer = layer
 	Loggie.info("BGM layer target set to %s" % target_layer)
+
+func play_sfx(name: String):
+	get_node(name).play()

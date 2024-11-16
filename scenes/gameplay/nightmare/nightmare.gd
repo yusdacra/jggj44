@@ -10,6 +10,7 @@ func post_ready(params: Dictionary) -> void:
 	for child: Node3D in %Maps.get_children():
 		if child.name == level_name: level = child
 		else: child.queue_free()
+	AudioServer.set_bus_bypass_effects(AudioServer.get_bus_index("SFX"), false)
 
 func pre_start(params: Dictionary) -> void:
 	level.get_node("Map").visible = false

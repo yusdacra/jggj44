@@ -12,6 +12,8 @@ class_name Player
 var footstep_timer: float = 0.0
 var footstep_switch: bool = false
 
+var last_on_floor := true
+
 const Controller := preload("res://addons/fpc/character.gd")
 @onready var controller: Controller = %Controller
 
@@ -25,8 +27,16 @@ func _ready() -> void:
 		CONNECT_ONE_SHOT,
 	)
 	get_tree().process_frame.connect(_process_footstep)
+	get_tree().process_frame.connect(_process_land)
 	controller.get_node("Neck/Head").rotation.y = global_rotation.y
 	global_rotation.y = 0.0
+
+func _process_land() -> void:
+	if Engine.get_process_frames() % 5 != 0: return
+	if not last_on_floor and controller.is_on_floor():
+		%FootstepSfxR.play()
+		%FootstepSfxL.play()
+	last_on_floor = controller.is_on_floor()
 
 func _process_footstep() -> void:
 	var delta := get_process_delta_time()

@@ -18,11 +18,12 @@ func _ready() -> void:
 			scene.tp_points[func_godot_properties["tag"]] = self,
 		CONNECT_ONE_SHOT,
 	)
+
 func _on_interact(player: Player) -> void:
 	player.controller.immobile = true
 	player.can_interact = false
 	UILayer.show_overlay()
-
+	get_tree().create_timer(fade_duration * 0.3).timeout.connect(func(): Audio.play_sfx("DoorOpen"))
 	get_tree().create_timer(fade_duration).timeout.connect(
 		func():
 			_tp_to_destination(player)

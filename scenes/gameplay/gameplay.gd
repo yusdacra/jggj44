@@ -21,6 +21,7 @@ var sp_lights: Dictionary = {}
 
 func post_ready(params: Dictionary):
 	for map: Node3D in %Maps.get_children(): if not map.visible: map.queue_free()
+	AudioServer.set_bus_bypass_effects(AudioServer.get_bus_index("SFX"), true)
 
 
 func pre_start(params: Dictionary):
@@ -53,4 +54,4 @@ func update_bgm_layer():
 			continue
 		else:
 			break
-	BGM.transition_to("%s_%s" % [time_layer_prefix, intensity_layer_suffix])
+	Audio.transition_to("%s_%s" % [time_layer_prefix, intensity_layer_suffix])

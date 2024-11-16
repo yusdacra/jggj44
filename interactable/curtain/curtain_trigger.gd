@@ -7,6 +7,7 @@ func _on_interact(player: Player):
 		"open": curtain.state = "partially_open"
 		"partially_open": curtain.state = "closed"
 		"closed": curtain.state = "open"
+	Audio.play_sfx("CurtainChange")
 
 func _on_interact_hover(player: Player):
 	var act: String
