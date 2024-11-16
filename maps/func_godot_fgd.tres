@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=10 format=3 uid="uid://c065vq5abao5u"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=11 format=3 uid="uid://c065vq5abao5u"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_dcvlx"]
 [ext_resource type="Resource" uid="uid://doqevwtgpsyb7" path="res://maps/entities/info_tp.tres" id="3_55oq3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://y3bfbiw1gnct" path="res://maps/entities/info_player_spawn.tres" id="7_fq8hn"]
 [ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="8_l50fi"]
 [ext_resource type="Resource" uid="uid://u0imcr6lorf6" path="res://maps/brushes/func_book.tres" id="8_w0g0j"]
+[ext_resource type="Resource" uid="uid://dcjoujs1hxo7c" path="res://maps/brushes/func_dialogue.tres" id="9_5ub66"]
 
 [resource]
 script = ExtResource("8_l50fi")
@@ -16,4 +17,4 @@ export_file = false
 target_map_editor = 1
 fgd_name = "FuncGodot"
 base_fgd_files = Array[Resource]([ExtResource("1_dcvlx")])
-entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3"), ExtResource("4_k4406"), ExtResource("5_tk213"), ExtResource("6_0ktc1"), ExtResource("7_ele64"), ExtResource("8_w0g0j")])
+entity_definitions = Array[Resource]([ExtResource("7_fq8hn"), ExtResource("3_55oq3"), ExtResource("4_k4406"), ExtResource("5_tk213"), ExtResource("6_0ktc1"), ExtResource("7_ele64"), ExtResource("8_w0g0j"), ExtResource("9_5ub66")])

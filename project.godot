@@ -150,7 +150,7 @@ fullscreen={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/sleep.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/sleep.dialogue", "res://dialogue/house.dialogue")
 
 [layer_names]
 

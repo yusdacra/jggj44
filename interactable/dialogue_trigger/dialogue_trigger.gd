@@ -1,12 +1,18 @@
 extends Interactable
 class_name DialogueTrigger
 
+@export var func_godot_properties: Dictionary
 @export var dialogue: DialogueResource
 @export var dialogue_title: String
 
 var mouse_mode_before: Input.MouseMode
 var player_immobile_before: bool
 var enabled_before: bool
+
+func _ready() -> void:
+	if func_godot_properties.has("dialogue_name") and func_godot_properties.has("title"):
+		dialogue = load("res://dialogue/%s.dialogue" % func_godot_properties["dialogue_name"])
+		dialogue_title = func_godot_properties["title"]
 
 func _on_interact(player: Player) -> void:
 	# remember the state before interacting so we can restore them later
