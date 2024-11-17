@@ -5,6 +5,7 @@ extends Control
 
 
 func _ready():
+	Audio.bgm.volume_db = linear_to_db(0.0)
 	# needed for gamepads to work
 	btn_play.grab_focus()
 	if OS.has_feature("web"):
