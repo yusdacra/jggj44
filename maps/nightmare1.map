@@ -21,7 +21,7 @@
 }
 // entity 2
 {
-"classname" "Player"
+"classname" "player"
 "origin" "56 56 24"
 "disable_quad" "1"
 }
@@ -238,4 +238,9 @@
 ( 752 416 0 ) ( 753 416 0 ) ( 752 416 1 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
 ( 768 400 0 ) ( 768 400 1 ) ( 768 401 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
+}
+// entity 18
+{
+"classname" "nightmare_start"
+"origin" "152 152 64"
 }

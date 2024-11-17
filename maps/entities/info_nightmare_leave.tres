@@ -20,4 +20,4 @@ meta_properties = {
 "size": AABB(-16, -16, -16, 16, 16, 16)
 }
 node_class = ""
-name_property = ""
+name_property = "classname"

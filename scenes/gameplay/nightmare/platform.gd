@@ -35,6 +35,7 @@ func _ready() -> void:
 	current_position = start_position
 	target_position = start_position + spread * dir
 	get_tree().process_frame.connect(_animate)
+	_update_random_target()
 
 func _add_model(model, model_name: String) -> void:
 	var model_node: Node3D
