@@ -10,6 +10,7 @@ const MUTE_DB: float = -60.0
 @export var default_transition: LayerTransitionProperties
 
 @onready var sync_stream: AudioStreamSynchronized = AudioStreamSynchronized.new()
+@onready var bgm: AudioStreamPlayer = %Player
 
 var target_layer: String
 var current_layer: String = "fallback"
@@ -26,6 +27,7 @@ var transition_timer: float = 0.0
 var stream_indices: Dictionary = {}
 
 func _ready() -> void:
+	return
 	layers["fallback"] = AudioStream.new()
 	sync_stream.stream_count = layers.size()
 	var idx := 0
@@ -39,6 +41,7 @@ func _ready() -> void:
 	transition_to(start_layer)
 
 func _process(delta: float) -> void:
+	return
 	if current_layer == target_layer: return
 	if transition_properties == null:
 		transition_properties = find_transition_for(current_layer, target_layer)
@@ -101,3 +104,6 @@ func transition_to(layer: String):
 
 func play_sfx(name: String):
 	get_node(name).play()
+
+func switch_to_clip(name: String):
+	%Player.set("parameters/switch_to_clip", name)

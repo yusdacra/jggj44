@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1qxuwsbkkuuv"]
+[gd_scene load_steps=12 format=3 uid="uid://d1qxuwsbkkuuv"]
 
 [ext_resource type="Script" path="res://audio_manager/audio_manager.gd" id="1_jes36"]
 [ext_resource type="Script" path="res://audio_manager/transition_properties.gd" id="2_mr6v2"]
 [ext_resource type="AudioStream" uid="uid://v03wjasa4bhi" path="res://assets/sfx/dooropen.ogg" id="3_av2ti"]
+[ext_resource type="AudioStream" uid="uid://cy7kib2m26okg" path="res://resources/audio/bgm.tres" id="3_xiwi0"]
 [ext_resource type="AudioStream" uid="uid://dpvjqy22n3f2" path="res://assets/sfx/curtainclose1.ogg" id="4_qrurm"]
 [ext_resource type="AudioStream" uid="uid://b1e0rhkixuccm" path="res://assets/sfx/curtainclose2.ogg" id="5_lgwhm"]
 [ext_resource type="AudioStream" uid="uid://cg5wtmvqe7a2f" path="res://assets/sfx/lightswitch.ogg" id="6_0i3fe"]
@@ -35,13 +36,14 @@ streams_count = 1
 stream_0/stream = ExtResource("6_0i3fe")
 
 [node name="AudioManager" type="Node"]
+process_mode = 3
 script = ExtResource("1_jes36")
 start_layer = "fallback"
 default_transition = SubResource("Resource_j7bgb")
 
 [node name="Player" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-autoplay = true
+stream = ExtResource("3_xiwi0")
 bus = &"BGM"
 
 [node name="DoorOpen" type="AudioStreamPlayer" parent="."]

@@ -22,9 +22,22 @@ var sp_lights: Dictionary = {}
 func post_ready(params: Dictionary):
 	for map: Node3D in %Maps.get_children(): if not map.visible: map.queue_free()
 	AudioServer.set_bus_bypass_effects(AudioServer.get_bus_index("SFX"), true)
+	# HACK
+	if GameState.time < 180.0: Audio.switch_to_clip("daytime")
+	if GameState.time < 180.0:
+		%Sun.light_energy = 1.0
+		%WorldEnvironment.environment.sky.sky_material = preload("res://resources/environments/day_sky.tres")
+		%Stars.visible = false
+	else:
+		%Sun.light_energy = 0.15
+		%WorldEnvironment.environment.sky.sky_material = preload("res://resources/environments/night_sky.tres")
+		%Stars.speed_scale = 10.0
+		get_tree().create_timer(3.0).timeout.connect(func(): %Stars.speed_scale = 1.0)
+		%Stars.visible = true
 
 
 func pre_start(params: Dictionary):
+	if not Audio.bgm.playing: Audio.bgm.play()
 	GameState.player.controller.jumping_enabled = false
 	GameState.player.controller.sprint_enabled = false
 	GameState.player.controller.crouch_enabled = false
@@ -34,9 +47,10 @@ func pre_start(params: Dictionary):
 
 
 func start(params):
-	update_bgm_layer()
-	GameState.time_changed.connect(func(x): update_bgm_layer())
-	GameState.light_intensity_changed.connect(func(x): update_bgm_layer())
+	pass
+	#update_bgm_layer()
+	#GameState.time_changed.connect(func(x): update_bgm_layer())
+	#GameState.light_intensity_changed.connect(func(x): update_bgm_layer())
 
 
 func update_bgm_layer():

@@ -40,7 +40,6 @@ radial_segments = 8
 rings = 4
 
 [node name="Stars" type="GPUParticles3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 12, -6)
 cast_shadow = 0
 extra_cull_margin = 16384.0
 ignore_occlusion_culling = true

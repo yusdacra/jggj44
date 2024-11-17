@@ -35,6 +35,7 @@ func pre_start(params: Dictionary) -> void:
 	player_init_rot = GameState.player.controller.HEAD.rotation + Vector3(0, PI, 0)
 	player_init_pos = GameState.player.controller.global_position
 	get_tree().process_frame.connect(check_player_death)
+	Audio.switch_to_clip("nightmare")
 
 func start(params: Dictionary) -> void:
 	level.get_node("Stars").speed_scale = 5.0
@@ -51,6 +52,17 @@ func _reveal():
 		level.get_node("Map"),
 		func(mesh: MeshInstance3D): mesh.visible = true,
 		func(node: Node): return node.name != leave_obj.name,
+	)
+
+func trigger_leave_dialogue():
+	GameState.time = 181.0
+	if GameState.time > 180.0: Audio.switch_to_clip("nighttime")
+	else: Audio.switch_to_clip("daytime")
+	UILayer.show_dialogue(preload("res://dialogue/nightmare.dialogue"), "nightmare%s_leave" % level.name)
+	DialogueManager.dialogue_ended.connect(
+		func(dialogue):
+			Game.change_scene_to_file("res://scenes/gameplay/gameplay.tscn", {"left_nightmare": true}),
+		CONNECT_ONE_SHOT,
 	)
 
 func trigger_start_dialogue():

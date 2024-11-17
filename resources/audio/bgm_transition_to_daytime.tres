@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamSynchronized" load_steps=6 format=3 uid="uid://yb0kfwfs22jw"]
+
+[ext_resource type="AudioStream" uid="uid://ck830nw61wt7e" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Daytime - Intensity Level 0.ogg" id="1_5vsia"]
+[ext_resource type="AudioStream" uid="uid://cxt1idgbvyoh8" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Daytime - Intensity Level 0.ogg" id="2_7pmj3"]
+[ext_resource type="AudioStream" uid="uid://x338lh1ibbb1" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Daytime - Intensity Level 1.ogg" id="3_u8rrx"]
+[ext_resource type="AudioStream" uid="uid://dx7apa2myh13h" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Daytime - Intensity Level 2.ogg" id="4_hnftf"]
+[ext_resource type="AudioStream" uid="uid://d5iyvpkpxnx4" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Daytime - Intensity Level 3.ogg" id="5_m1eou"]
+
+[resource]
+stream_count = 5
+stream_0/stream = ExtResource("1_5vsia")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_7pmj3")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_u8rrx")
+stream_2/volume = -3.0
+stream_3/stream = ExtResource("4_hnftf")
+stream_3/volume = -3.0
+stream_4/stream = ExtResource("5_m1eou")
+stream_4/volume = -3.0

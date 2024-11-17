@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://c2gocuhw2o7py"]
+[gd_scene load_steps=9 format=4 uid="uid://c2gocuhw2o7py"]
 
 [ext_resource type="Texture2D" uid="uid://pqdrhl2l3jli" path="res://assets/menu_art.png" id="2_ep8nk"]
 [ext_resource type="Script" path="res://scenes/menu/game_version.gd" id="4_3hod2"]
@@ -71,6 +71,9 @@ cache/0/60/0/glyphs/73/texture_idx = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7cyh"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_fvcd8"]
+font_size = 12
+
 [node name="Menu" type="Control" node_paths=PackedStringArray("btn_play", "btn_exit")]
 layout_mode = 3
 anchors_preset = 15
@@ -126,7 +129,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 focus_neighbor_bottom = NodePath("../ExitButton")
 focus_next = NodePath("../ExitButton")
-text = "start"
+text = "start."
 alignment = 0
 
 [node name="ExitButton" type="Button" parent="MarginContainer/GameMenu"]
@@ -134,7 +137,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 focus_neighbor_top = NodePath("../PlayButton")
 focus_previous = NodePath("../PlayButton")
-text = "quit"
+text = "quit."
 alignment = 0
 
 [node name="Version" type="VBoxContainer" parent="MarginContainer"]
@@ -165,27 +168,29 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_type_variation = &"LabelSmall"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "authors."
+text = ".authors"
+horizontal_alignment = 2
 
 [node name="Developer1" type="Label" parent="MarginContainer/Credits"]
-visible = false
 layout_mode = 2
 theme_type_variation = &"LabelSmall"
 theme_override_colors/font_color = Color(0.92549, 0.92549, 0.92549, 1)
+text = "Lead, 3D Artist: dusk (@yusdacra)"
+label_settings = SubResource("LabelSettings_fvcd8")
 
 [node name="Developer2" type="Label" parent="MarginContainer/Credits"]
-visible = false
 layout_mode = 2
 theme_type_variation = &"LabelSmall"
 theme_override_colors/font_color = Color(0.886275, 0.87451, 0.87451, 1)
-text = "Javier S. Dacarett"
+text = "Music Designer: Javier S. Dacarett"
+label_settings = SubResource("LabelSettings_fvcd8")
 
 [node name="Developer3" type="Label" parent="MarginContainer/Credits"]
-visible = false
 layout_mode = 2
 theme_type_variation = &"LabelSmall"
 theme_override_colors/font_color = Color(0.886275, 0.87451, 0.87451, 1)
-text = "Developer 3"
+text = "2D Artist: AconcaguaPartii "
+label_settings = SubResource("LabelSettings_fvcd8")
 
 [connection signal="mouse_entered" from="MarginContainer/GameMenu/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/GameMenu/PlayButton" to="." method="_on_PlayButton_pressed"]

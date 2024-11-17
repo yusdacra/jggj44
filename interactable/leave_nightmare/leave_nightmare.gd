@@ -30,11 +30,11 @@ func _move_to_leave() -> void:
 		get_tree().process_frame.disconnect(_move_to_leave)
 
 func _on_interact(player: Player):
+	enabled = false
 	if scene.is_started:
 		player.controller.immobile = true
-		Game.change_scene_to_file("res://scenes/gameplay/gameplay.tscn", {"left_nightmare": true})
+		scene.trigger_leave_dialogue()
 	else:
-		enabled = false
 		scene.trigger_start_dialogue()
 		scene.started.connect(
 			func(): get_tree().process_frame.connect(_move_to_leave),

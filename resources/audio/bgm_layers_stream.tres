@@ -1,0 +1,23 @@
+[gd_resource type="AudioStreamSynchronized" load_steps=7 format=3 uid="uid://c38shrbfm23i4"]
+
+[ext_resource type="AudioStream" uid="uid://dqlhghinkufs7" path="res://resources/audio/bgm_daytime_loop.tres" id="1_5ci2d"]
+[ext_resource type="AudioStream" uid="uid://beso73m2e0cdo" path="res://resources/audio/bgm_nightmare_loop.tres" id="2_hnpkc"]
+[ext_resource type="AudioStream" uid="uid://ubgtpvs4vfmq" path="res://resources/audio/bgm_nighttime_loop.tres" id="3_ojhmv"]
+[ext_resource type="AudioStream" uid="uid://yb0kfwfs22jw" path="res://resources/audio/bgm_transition_to_daytime.tres" id="4_bomdf"]
+[ext_resource type="AudioStream" uid="uid://dlpex8n2tr76s" path="res://resources/audio/bgm_transition_to_nightmare.tres" id="5_hjvg6"]
+[ext_resource type="AudioStream" uid="uid://b2elbharisv3y" path="res://resources/audio/bgm_transition_to_nighttime.tres" id="6_erdpt"]
+
+[resource]
+stream_count = 6
+stream_0/stream = ExtResource("1_5ci2d")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_hnpkc")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_ojhmv")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("4_bomdf")
+stream_3/volume = 0.0
+stream_4/stream = ExtResource("5_hjvg6")
+stream_4/volume = 0.0
+stream_5/stream = ExtResource("6_erdpt")
+stream_5/volume = 0.0

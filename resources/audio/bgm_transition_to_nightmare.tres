@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamSynchronized" load_steps=6 format=3 uid="uid://dlpex8n2tr76s"]
+
+[ext_resource type="AudioStream" uid="uid://rqdvara0kav3" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Nightmare - Intensity Level 0.ogg" id="1_kwnsx"]
+[ext_resource type="AudioStream" uid="uid://diu72fxhrf0ci" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Nightmare - Intensity Level 0.ogg" id="2_cet2r"]
+[ext_resource type="AudioStream" uid="uid://cuwt26e6fvpn0" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Nightmare - Intensity Level 1.ogg" id="3_71qog"]
+[ext_resource type="AudioStream" uid="uid://dx6qs2sah7scx" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Nightmare - Intensity Level 2.ogg" id="4_xlw77"]
+[ext_resource type="AudioStream" uid="uid://jofcvm1sxuwf" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Nightmare - Intensity Level 3.ogg" id="5_efr5c"]
+
+[resource]
+stream_count = 5
+stream_0/stream = ExtResource("1_kwnsx")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_cet2r")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_71qog")
+stream_2/volume = -3.0
+stream_3/stream = ExtResource("4_xlw77")
+stream_3/volume = -3.0
+stream_4/stream = ExtResource("5_efr5c")
+stream_4/volume = -3.0

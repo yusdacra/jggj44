@@ -30,13 +30,13 @@ spot_angle = 80.0
 [node name="FootstepSfxL" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_2c3wn")
-volume_db = -20.0
+volume_db = -15.0
 max_polyphony = 4
 bus = &"SFX L"
 
 [node name="FootstepSfxR" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_2c3wn")
-volume_db = -20.0
+volume_db = -15.0
 max_polyphony = 4
 bus = &"SFX R"

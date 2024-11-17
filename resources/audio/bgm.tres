@@ -1,0 +1,157 @@
+[gd_resource type="AudioStreamInteractive" load_steps=37 format=3 uid="uid://cy7kib2m26okg"]
+
+[ext_resource type="AudioStream" uid="uid://bqnoqrwte6sl4" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Daytime - Intensity Level 0.ogg" id="1_d2w4u"]
+[ext_resource type="AudioStream" uid="uid://cek0qtuusbiey" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Daytime - Intensity Level 0.ogg" id="2_2uije"]
+[ext_resource type="AudioStream" uid="uid://dj1qxbp6ct8mm" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Daytime - Intensity Level 1.ogg" id="3_8icc8"]
+[ext_resource type="AudioStream" uid="uid://bivn1qoulcelc" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Daytime - Intensity Level 2.ogg" id="4_432d2"]
+[ext_resource type="AudioStream" uid="uid://cdldadmedo7j5" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Daytime - Intensity Level 3.ogg" id="5_rneh0"]
+[ext_resource type="AudioStream" uid="uid://rqdvara0kav3" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Nightmare - Intensity Level 0.ogg" id="6_ptosc"]
+[ext_resource type="AudioStream" uid="uid://diu72fxhrf0ci" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Nightmare - Intensity Level 0.ogg" id="7_xkj8l"]
+[ext_resource type="AudioStream" uid="uid://cuwt26e6fvpn0" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Nightmare - Intensity Level 1.ogg" id="8_qxe07"]
+[ext_resource type="AudioStream" uid="uid://dx6qs2sah7scx" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Nightmare - Intensity Level 2.ogg" id="9_7s647"]
+[ext_resource type="AudioStream" uid="uid://jofcvm1sxuwf" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Nightmare - Intensity Level 3.ogg" id="10_5qr4g"]
+[ext_resource type="AudioStream" uid="uid://ccp8kj40iwmcn" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Nightmare - Intensity Level 0.ogg" id="11_k57ou"]
+[ext_resource type="AudioStream" uid="uid://bs1kqwlarqghi" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Nightmare - Intensity Level 0.ogg" id="12_7ayps"]
+[ext_resource type="AudioStream" uid="uid://b7dcpocbnxfqb" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Nightmare - Intensity Level 1.ogg" id="13_0x4jl"]
+[ext_resource type="AudioStream" uid="uid://kx1y3o51ddg6" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Nightmare - Intensity Level 2.ogg" id="14_xb51c"]
+[ext_resource type="AudioStream" uid="uid://dspil02i0fthn" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Nightmare - Intensity Level 3.ogg" id="15_nfuh5"]
+[ext_resource type="AudioStream" uid="uid://c7wiql2rxx53e" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Nighttime - Intensity Level 0.ogg" id="16_h66al"]
+[ext_resource type="AudioStream" uid="uid://deeak7klv6paf" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Nighttime - Intensity Level 0.ogg" id="17_ia1j8"]
+[ext_resource type="AudioStream" uid="uid://bex7xa2bopmi" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Nighttime - Intensity Level 1.ogg" id="18_4gy1p"]
+[ext_resource type="AudioStream" uid="uid://2chqr1pb6ngm" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Nighttime - Intensity Level 2.ogg" id="19_kcgr1"]
+[ext_resource type="AudioStream" uid="uid://ce2ct6cxd3s37" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Nighttime - Intensity Level 3.ogg" id="20_ouya6"]
+[ext_resource type="AudioStream" uid="uid://decpkvaccriai" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Nighttime - Intensity Level 0.ogg" id="21_maaw1"]
+[ext_resource type="AudioStream" uid="uid://dghj7o0cjckct" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Nighttime - Intensity Level 0.ogg" id="22_2fdqq"]
+[ext_resource type="AudioStream" uid="uid://d2f65rhik8ao" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Nighttime - Intensity Level 1.ogg" id="23_c3u3m"]
+[ext_resource type="AudioStream" uid="uid://dpea45c3jebka" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Nighttime - Intensity Level 2.ogg" id="24_5mg0a"]
+[ext_resource type="AudioStream" uid="uid://cbnlwssnh6t3u" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Nighttime - Intensity Level 3.ogg" id="25_qxls5"]
+[ext_resource type="AudioStream" uid="uid://ck830nw61wt7e" path="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Daytime - Intensity Level 0.ogg" id="26_n8hts"]
+[ext_resource type="AudioStream" uid="uid://cxt1idgbvyoh8" path="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Daytime - Intensity Level 0.ogg" id="27_opt28"]
+[ext_resource type="AudioStream" uid="uid://x338lh1ibbb1" path="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Daytime - Intensity Level 1.ogg" id="28_lsavn"]
+[ext_resource type="AudioStream" uid="uid://dx7apa2myh13h" path="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Daytime - Intensity Level 2.ogg" id="29_gg4rg"]
+[ext_resource type="AudioStream" uid="uid://d5iyvpkpxnx4" path="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Daytime - Intensity Level 3.ogg" id="30_y1d7g"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_hcsef"]
+stream_count = 5
+stream_0/stream = ExtResource("1_d2w4u")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_2uije")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("3_8icc8")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("4_432d2")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("5_rneh0")
+stream_4/volume = -60.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_sme86"]
+stream_count = 5
+stream_0/stream = ExtResource("6_ptosc")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("7_xkj8l")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("8_qxe07")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("9_7s647")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("10_5qr4g")
+stream_4/volume = -60.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_8mmk6"]
+stream_count = 5
+stream_0/stream = ExtResource("11_k57ou")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("12_7ayps")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("13_0x4jl")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("14_xb51c")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("15_nfuh5")
+stream_4/volume = -60.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_hwhat"]
+stream_count = 5
+stream_0/stream = ExtResource("16_h66al")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("17_ia1j8")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("18_4gy1p")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("19_kcgr1")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("20_ouya6")
+stream_4/volume = -60.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_tdra5"]
+stream_count = 5
+stream_0/stream = ExtResource("21_maaw1")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("22_2fdqq")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("23_c3u3m")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("24_5mg0a")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("25_qxls5")
+stream_4/volume = -60.0
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_vfehx"]
+stream_count = 5
+stream_0/stream = ExtResource("26_n8hts")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("27_opt28")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("28_lsavn")
+stream_2/volume = -60.0
+stream_3/stream = ExtResource("29_gg4rg")
+stream_3/volume = -60.0
+stream_4/stream = ExtResource("30_y1d7g")
+stream_4/volume = -60.0
+
+[resource]
+clip_count = 6
+clip_0/name = &"daytime"
+clip_0/stream = SubResource("AudioStreamSynchronized_hcsef")
+clip_0/auto_advance = 0
+clip_1/name = &"to_nightmare"
+clip_1/stream = SubResource("AudioStreamSynchronized_sme86")
+clip_1/auto_advance = 0
+clip_2/name = &"nightmare"
+clip_2/stream = SubResource("AudioStreamSynchronized_8mmk6")
+clip_2/auto_advance = 0
+clip_3/name = &"to_nighttime"
+clip_3/stream = SubResource("AudioStreamSynchronized_hwhat")
+clip_3/auto_advance = 0
+clip_4/name = &"nighttime"
+clip_4/stream = SubResource("AudioStreamSynchronized_tdra5")
+clip_4/auto_advance = 0
+clip_5/name = &"to_daytime"
+clip_5/stream = SubResource("AudioStreamSynchronized_vfehx")
+clip_5/auto_advance = 0
+_transitions = {
+Vector2i(0, 2): {
+"fade_beats": 0,
+"fade_mode": 3,
+"filler_clip": 1,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+},
+Vector2i(2, 4): {
+"fade_beats": 0,
+"fade_mode": 3,
+"filler_clip": 3,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+},
+Vector2i(4, 0): {
+"fade_beats": 0,
+"fade_mode": 3,
+"filler_clip": 5,
+"from_time": 0,
+"to_time": 1,
+"use_filler_clip": true
+}
+}

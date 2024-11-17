@@ -15,19 +15,21 @@ var on_energy := 1.0
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
-		Scenes.change_pre_finish.connect(func(scene): _set_props(scene), CONNECT_ONE_SHOT)
+		_set_props()
+		Scenes.change_pre_finish.connect(_update_sp_lights, CONNECT_ONE_SHOT)
 		get_tree().process_frame.connect(
 			func():
 				if Engine.get_process_frames() % 5:
 					%Bulb.visible = not is_zero_approx(light_energy)
 		)
 
-func _set_props(scene: Node = null) -> void:
+func _set_props() -> void:
 	light_energy = func_godot_properties[\"spot_energy\"]; on_energy = light_energy
 	spot_angle = func_godot_properties[\"spot_angle\"]
 	spot_range = func_godot_properties[\"spot_range\"]
-	if not Engine.is_editor_hint() and scene != null:
-		scene.sp_lights[func_godot_properties[\"tag\"]] = self
+
+func _update_sp_lights(scene: Node) -> void:
+	scene.sp_lights[func_godot_properties[\"tag\"]] = self
 "
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kakx8"]
