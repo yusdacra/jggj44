@@ -2,7 +2,7 @@
 extends StaticBody3D
 class_name NightmarePlatform
 
-const MODEL_PATHS: Dictionary = {
+const MODELS: Dictionary = {
 	"simple": preload("res://assets/models/platform/simple.tres"),
 	"triprism": preload("res://assets/models/platform/triprism.fbx"),
 }
@@ -12,50 +12,50 @@ const MODEL_PATHS: Dictionary = {
 @export var breathing_spread := 0.1
 @export var breathing_speed := 1.0
 @export var func_godot_properties: Dictionary
-@export var added_models := false
-@export var models := []
+@export var added_model_name: String
 
 @onready var dir := Vector3(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0), randf_range(-1.0, 1.0))
 @onready var breathing_offset := randf_range(-PI, PI)
 
-@onready var start_position: Vector3 = position
-@onready var current_position: Vector3 = start_position
-@onready var target_position: Vector3 = start_position + spread * dir
+var model: Node3D
+var start_position: Vector3
+var current_position: Vector3
+var target_position: Vector3
 
 func _func_godot_build_complete():
-	if not added_models:
-		for model_name in MODEL_PATHS.keys():
-			var model = MODEL_PATHS[model_name]
-			if model is Mesh:
-				var mesh := MeshInstance3D.new(); mesh.mesh = model
-				add_child(mesh); mesh.name = model_name
-				models.append(mesh)
-			elif model is PackedScene:
-				var instanced: Node = model.instantiate()
-				add_child(instanced); instanced.name = model_name
-				models.append(instanced)
-		added_models = true
-	_update_model()
+	var model_name: String = MODELS.keys().pick_random()
+	_add_model(MODELS[model_name], model_name)
 
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
-	scale_object_local(Vector3.ONE * randf_range(0.8, 1.3))
-	rotation.y = randf_range(0, PI)
+	model = get_node(added_model_name)
+	model.scale_object_local(Vector3.ONE * randf_range(0.8, 1.3))
+	model.rotation.y = randf_range(0, PI)
+	start_position = model.position
+	current_position = start_position
+	target_position = start_position + spread * dir
 	get_tree().process_frame.connect(_animate)
 
-func _update_model() -> void:
+func _add_model(model, model_name: String) -> void:
 	var model_node: Node3D
-	var model_name: String = func_godot_properties.get("model_name", "")
-	if model_name.is_empty(): model_node = models.pick_random()
-	else: model_node = get_node(model_name)
+	if model is Mesh:
+		var mesh := MeshInstance3D.new(); mesh.mesh = model
+		add_child(mesh)
+		mesh.set_owner(get_tree().edited_scene_root)
+		mesh.name = model_name
+		model_node = mesh
+	elif model is PackedScene:
+		var instanced: Node = model.instantiate()
+		add_child(instanced)
+		instanced.set_owner(get_tree().edited_scene_root)
+		instanced.name = model_name
+		model_node = instanced
 	var col_shape: CollisionShape3D = get_child(0)
-	for model in models: model.visible = false
-	model_node.visible = true
 	var points: PackedVector3Array = col_shape.shape.points; points.sort()
 	var size := points[points.size() - 1] - points[0]
 	model_node.position = model_node.get_parent_node_3d().position
 	model_node.position -= model_node.position.sign() * size * 0.5
-	Loggie.info("test %s" % size)
+	added_model_name = model_name
 
 func _update_random_target() -> void:
 	dir = Vector3(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0), randf_range(-1.0, 1.0))
@@ -65,5 +65,5 @@ func _update_random_target() -> void:
 func _animate() -> void:
 	var delta := get_process_delta_time()
 	current_position = current_position.move_toward(target_position, delta * speed)
-	position = current_position
-	position.y += breathing_spread * sin(breathing_offset + (Time.get_ticks_msec() as float * 0.001 * breathing_speed))
+	model.position = current_position
+	model.position.y += breathing_spread * sin(breathing_offset + (Time.get_ticks_msec() as float * 0.001 * breathing_speed))

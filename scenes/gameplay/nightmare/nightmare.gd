@@ -32,7 +32,7 @@ func _reveal():
 	GameState.player.controller.immobile = false
 	level.get_node("Map").visible = true
 	level.get_node("Stars").speed_scale = 1.0
-	#UILayer.show_dialogue(preload("res://dialogue/nightmare.dialogue"), "nightmare%s" % level.name)
+	UILayer.show_dialogue(preload("res://dialogue/nightmare.dialogue"), "nightmare%s" % level.name)
 	for child in level.get_node("Map").get_children():
 		pass
 

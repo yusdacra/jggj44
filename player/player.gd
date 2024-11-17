@@ -20,12 +20,8 @@ const Controller := preload("res://addons/fpc/character.gd")
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	_update_with_props(func_godot_properties)
-	Scenes.change_pre_finish.connect(
-		func(scene: Node):
-			GameState.player = self
-			get_tree().process_frame.connect(_check_interactable),
-		CONNECT_ONE_SHOT,
-	)
+	GameState.player = self
+	get_tree().process_frame.connect(_check_interactable)
 	get_tree().process_frame.connect(_process_footstep)
 	get_tree().process_frame.connect(_process_land)
 	controller.get_node("Neck/Head").rotation.y = global_rotation.y
