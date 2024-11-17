@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d008jk7f4d561"
 path.s3tc="res://.godot/imported/Stone_tiled_homemade_simple.png-37348a2f7596e99ec72aef51a4d13e0b.s3tc.ctex"
+path.etc2="res://.godot/imported/Stone_tiled_homemade_simple.png-37348a2f7596e99ec72aef51a4d13e0b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/oldschool/Stone_tiled_homemade_simple.png"
-dest_files=["res://.godot/imported/Stone_tiled_homemade_simple.png-37348a2f7596e99ec72aef51a4d13e0b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Stone_tiled_homemade_simple.png-37348a2f7596e99ec72aef51a4d13e0b.s3tc.ctex", "res://.godot/imported/Stone_tiled_homemade_simple.png-37348a2f7596e99ec72aef51a4d13e0b.etc2.ctex"]
 
 [params]
 

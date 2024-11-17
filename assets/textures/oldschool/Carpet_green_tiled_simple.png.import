@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp388kbosfu8b"
 path.s3tc="res://.godot/imported/Carpet_green_tiled_simple.png-5d9d0e8770a0176f2a189457456eef26.s3tc.ctex"
+path.etc2="res://.godot/imported/Carpet_green_tiled_simple.png-5d9d0e8770a0176f2a189457456eef26.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/oldschool/Carpet_green_tiled_simple.png"
-dest_files=["res://.godot/imported/Carpet_green_tiled_simple.png-5d9d0e8770a0176f2a189457456eef26.s3tc.ctex"]
+dest_files=["res://.godot/imported/Carpet_green_tiled_simple.png-5d9d0e8770a0176f2a189457456eef26.s3tc.ctex", "res://.godot/imported/Carpet_green_tiled_simple.png-5d9d0e8770a0176f2a189457456eef26.etc2.ctex"]
 
 [params]
 

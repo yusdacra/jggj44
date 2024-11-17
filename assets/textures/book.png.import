@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8pk7n7k6jiyu"
 path.s3tc="res://.godot/imported/book.png-61f3e8b263a8d68f3575797d785df077.s3tc.ctex"
+path.etc2="res://.godot/imported/book.png-61f3e8b263a8d68f3575797d785df077.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/book.png"
-dest_files=["res://.godot/imported/book.png-61f3e8b263a8d68f3575797d785df077.s3tc.ctex"]
+dest_files=["res://.godot/imported/book.png-61f3e8b263a8d68f3575797d785df077.s3tc.ctex", "res://.godot/imported/book.png-61f3e8b263a8d68f3575797d785df077.etc2.ctex"]
 
 [params]
 

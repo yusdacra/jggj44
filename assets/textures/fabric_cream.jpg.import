@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://etqvyd06yfk0"
 path.s3tc="res://.godot/imported/fabric_cream.jpg-47b8edf261bce816a201d276f634bef9.s3tc.ctex"
+path.etc2="res://.godot/imported/fabric_cream.jpg-47b8edf261bce816a201d276f634bef9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/fabric_cream.jpg"
-dest_files=["res://.godot/imported/fabric_cream.jpg-47b8edf261bce816a201d276f634bef9.s3tc.ctex"]
+dest_files=["res://.godot/imported/fabric_cream.jpg-47b8edf261bce816a201d276f634bef9.s3tc.ctex", "res://.godot/imported/fabric_cream.jpg-47b8edf261bce816a201d276f634bef9.etc2.ctex"]
 
 [params]
 

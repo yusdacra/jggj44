@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://byd8p6wmfnwab"
 path.s3tc="res://.godot/imported/palm_pot_tex.png-fa17df5c2197bbdf1dca53b25167607b.s3tc.ctex"
+path.etc2="res://.godot/imported/palm_pot_tex.png-fa17df5c2197bbdf1dca53b25167607b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/palm_pot_tex.png"
-dest_files=["res://.godot/imported/palm_pot_tex.png-fa17df5c2197bbdf1dca53b25167607b.s3tc.ctex"]
+dest_files=["res://.godot/imported/palm_pot_tex.png-fa17df5c2197bbdf1dca53b25167607b.s3tc.ctex", "res://.godot/imported/palm_pot_tex.png-fa17df5c2197bbdf1dca53b25167607b.etc2.ctex"]
 
 [params]
 

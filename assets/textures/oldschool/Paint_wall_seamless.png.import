@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mhljhd8gn73t"
 path.s3tc="res://.godot/imported/Paint_wall_seamless.png-547a3382d7e6aeea153fa90988a83da0.s3tc.ctex"
+path.etc2="res://.godot/imported/Paint_wall_seamless.png-547a3382d7e6aeea153fa90988a83da0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/oldschool/Paint_wall_seamless.png"
-dest_files=["res://.godot/imported/Paint_wall_seamless.png-547a3382d7e6aeea153fa90988a83da0.s3tc.ctex"]
+dest_files=["res://.godot/imported/Paint_wall_seamless.png-547a3382d7e6aeea153fa90988a83da0.s3tc.ctex", "res://.godot/imported/Paint_wall_seamless.png-547a3382d7e6aeea153fa90988a83da0.etc2.ctex"]
 
 [params]
 

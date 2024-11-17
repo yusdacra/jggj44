@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cada61wa84wro"
 path.s3tc="res://.godot/imported/transparent_col.png-1ddea200c9b0f1766c603c2a122d8ef9.s3tc.ctex"
+path.etc2="res://.godot/imported/transparent_col.png-1ddea200c9b0f1766c603c2a122d8ef9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/textures/transparent_col.png"
-dest_files=["res://.godot/imported/transparent_col.png-1ddea200c9b0f1766c603c2a122d8ef9.s3tc.ctex"]
+dest_files=["res://.godot/imported/transparent_col.png-1ddea200c9b0f1766c603c2a122d8ef9.s3tc.ctex", "res://.godot/imported/transparent_col.png-1ddea200c9b0f1766c603c2a122d8ef9.etc2.ctex"]
 
 [params]
 
