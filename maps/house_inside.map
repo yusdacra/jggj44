@@ -1342,10 +1342,10 @@
 {
 "classname" "Spotlight"
 "origin" "540 332 132"
-"spot_energy" "1.4"
+"spot_energy" "1.1"
 "_phong_angle" "89"
-"spot_angle" "72"
-"spot_range" "16"
+"spot_angle" "64"
+"spot_range" "12"
 "angle" "-2"
 "tag" "living_room_light"
 "_tb_group" "14"

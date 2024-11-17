@@ -22,6 +22,8 @@ var sp_lights: Dictionary = {}
 func post_ready(params: Dictionary):
 	for map: Node3D in %Maps.get_children(): if not map.visible: map.queue_free()
 	AudioServer.set_bus_bypass_effects(AudioServer.get_bus_index("SFX"), true)
+	if params.get("fade_music_in", false):
+		get_tree().process_frame.connect(_fade_in_music)
 	# HACK
 	if GameState.time < 180.0: Audio.switch_to_clip("daytime")
 	if GameState.time < 180.0:
@@ -52,6 +54,11 @@ func start(params):
 	#GameState.time_changed.connect(func(x): update_bgm_layer())
 	#GameState.light_intensity_changed.connect(func(x): update_bgm_layer())
 
+func _fade_in_music():
+	var delta := get_process_delta_time()
+	Audio.bgm.volume_db = linear_to_db(move_toward(db_to_linear(Audio.bgm.volume_db), 1.0, delta * absf(1.0 - db_to_linear(Audio.bgm.volume_db))))
+	if is_zero_approx(db_to_linear(Audio.bgm.volume_db)):
+		get_tree().process_frame.disconnect(_fade_in_music)
 
 func update_bgm_layer():
 	var intensity_layer_levels = intensity_music_layers.keys()

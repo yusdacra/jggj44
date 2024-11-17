@@ -44,6 +44,7 @@ default_transition = SubResource("Resource_j7bgb")
 [node name="Player" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_xiwi0")
+volume_db = -80.0
 bus = &"BGM"
 
 [node name="DoorOpen" type="AudioStreamPlayer" parent="."]

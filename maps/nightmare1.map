@@ -24,6 +24,7 @@
 "classname" "player"
 "origin" "56 56 24"
 "disable_quad" "1"
+"angle" "210"
 }
 // entity 3
 {
