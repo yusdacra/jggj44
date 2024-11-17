@@ -7,8 +7,7 @@ size = Vector3(1.2, 1.2, 0.4)
 
 [node name="TpPoint" type="Area3D"]
 collision_layer = 2
-collision_mask = 0
-monitoring = false
+monitorable = false
 script = ExtResource("1_1u4vx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -18,3 +17,5 @@ shape = SubResource("BoxShape3D_fi4gm")
 unique_name_in_owner = true
 enabled = false
 target_position = Vector3(0, -100, 0)
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

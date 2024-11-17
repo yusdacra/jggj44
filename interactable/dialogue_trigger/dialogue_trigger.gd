@@ -13,6 +13,8 @@ func _ready() -> void:
 	if func_godot_properties.has("dialogue_name") and func_godot_properties.has("title"):
 		dialogue = load("res://dialogue/%s.dialogue" % func_godot_properties["dialogue_name"])
 		dialogue_title = func_godot_properties["title"]
+		if not func_godot_properties.get("interact_text", "").is_empty():
+			interact_text = func_godot_properties.get("interact_text")
 
 func _on_interact(player: Player) -> void:
 	# remember the state before interacting so we can restore them later
@@ -28,6 +30,6 @@ func _on_interact(player: Player) -> void:
 
 func _on_dialogue_end(d: DialogueResource, player: Player):
 	if dialogue != d: return
-	enabled = enabled_before
-	player.controller.immobile = player_immobile_before
 	Input.mouse_mode = mouse_mode_before
+	player.controller.immobile = player_immobile_before
+	get_tree().create_timer(0.2).timeout.connect(func(): enabled = enabled_before)

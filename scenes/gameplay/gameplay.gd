@@ -25,9 +25,13 @@ func post_ready(params: Dictionary):
 
 
 func pre_start(params: Dictionary):
+	GameState.player.controller.jumping_enabled = false
+	GameState.player.controller.sprint_enabled = false
+	GameState.player.controller.crouch_enabled = false
 	if params.get("left_nightmare", false):
 		GameState.player.controller.global_position = %NightmareLeaveSpawn.global_position
 		GameState.player.controller.HEAD.rotation = %NightmareLeaveSpawn.global_rotation
+
 
 func start(params):
 	update_bgm_layer()

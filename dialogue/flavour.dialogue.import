@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://drmncjph50aus"
+path="res://.godot/imported/flavour.dialogue-5aa141748eb54300ece883065c3af2e4.tres"
+
+[deps]
+
+source_file="res://dialogue/flavour.dialogue"
+dest_files=["res://.godot/imported/flavour.dialogue-5aa141748eb54300ece883065c3af2e4.tres"]
+
+[params]
+
+defaults=true

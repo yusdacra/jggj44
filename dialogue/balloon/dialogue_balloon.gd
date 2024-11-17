@@ -38,9 +38,11 @@ var dialogue_line: DialogueLine:
 			await ready
 
 		dialogue_line = next_dialogue_line
+		dialogue_line.text = "[center]%s" % dialogue_line.text
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+		character_label.text = "[center]%s" % character_label.text
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
@@ -93,10 +95,14 @@ func _ready() -> void:
 	if responses_menu.next_action.is_empty():
 		responses_menu.next_action = next_action
 
-
-#func _unhandled_input(_event: InputEvent) -> void:
-	## Only the balloon is allowed to handle input while it's showing
-	#get_viewport().set_input_as_handled()
+func _unhandled_input(event: InputEvent) -> void:
+	if not visible: return
+	if event.is_pressed() and event.as_text().is_valid_int():
+		var idx := event.as_text().to_int()
+		var node = %ResponsesMenu.get_child(idx)
+		if node != null and node.resp_idx + 1 == idx:
+			%ResponsesMenu.response_selected.emit(node.response)
+	get_viewport().set_input_as_handled()
 
 
 func _notification(what: int) -> void:
@@ -119,6 +125,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 
 ## Go to the next line
 func next(next_id: String) -> void:
+	GameState.resp_idx = 0
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
 
 

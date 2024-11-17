@@ -365,7 +365,8 @@ func headbob_animation(moving):
 			HEADBOB_ANIMATION.play("RESET", 1)
 
 
-func _unhandled_input(event : InputEvent):
+func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		mouseInput.x += event.relative.x
 		mouseInput.y += event.relative.y
+	if immobile: return

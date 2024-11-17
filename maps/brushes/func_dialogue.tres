@@ -24,6 +24,7 @@ func_godot_internal = false
 base_classes = Array[Resource]([])
 class_properties = {
 "dialogue_name": "name",
+"interact_text": "",
 "title": "title"
 }
 class_property_descriptions = {}

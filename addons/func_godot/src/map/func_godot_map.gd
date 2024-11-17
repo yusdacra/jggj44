@@ -429,7 +429,14 @@ func build_entity_nodes() -> Array:
 						entity_nodes[entity_idx] = null
 						continue
 					if entity_definition.node_class != "":
-						node = ClassDB.instantiate(entity_definition.node_class)
+						if ClassDB.class_exists(entity_definition.node_class):
+							node = ClassDB.instantiate(entity_definition.node_class)
+						else:
+							var global_classes := ProjectSettings.get_global_class_list()
+							for class_dict in global_classes:
+								if class_dict["class"] == entity_definition.node_class:
+									node = ClassDB.instantiate(class_dict["base"])
+									node.set_script(load(class_dict["path"]))
 				elif entity_definition is FuncGodotFGDPointClass:
 					if entity_definition.scene_file:
 						var flag: PackedScene.GenEditState = PackedScene.GEN_EDIT_STATE_DISABLED

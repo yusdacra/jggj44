@@ -1,6 +1,0 @@
-~ nightmare
-Go to sleep?
-- Yes
-	do GameState.change_to_nightmare()
-- No
-=> END

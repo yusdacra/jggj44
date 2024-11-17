@@ -67,23 +67,25 @@
 }
 // entity 4
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "1"
-"_tb_linked_group_id" "{583355eb-0882-4745-9ffb-f6d7062e45f8}"
-"_tb_transformation" "1 0 0 48 0 1 0 80 0 0 1 16 0 0 0 1"
+"classname" "func_geo"
+// brush 0
+{
+( 1376 -64 -64 ) ( 1376 -63 -64 ) ( 1376 -64 -63 ) nightmare_tex [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1376 -64 -64 ) ( 1376 -64 -63 ) ( 1377 -64 -64 ) nightmare_tex [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1376 -64 -64 ) ( 1377 -64 -64 ) ( 1376 -63 -64 ) nightmare_tex [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1568 128 -32 ) ( 1568 129 -32 ) ( 1569 128 -32 ) nightmare_tex [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1568 128 -32 ) ( 1569 128 -32 ) ( 1568 128 -31 ) nightmare_tex [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1568 128 -32 ) ( 1568 128 -31 ) ( 1568 129 -32 ) nightmare_tex [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
 // entity 5
 {
-"classname" "nightmare_platform"
-"origin" "304 256 16"
-"_tb_group" "1"
+"classname" "nightmare_leave"
+"origin" "1472 32 64"
 }
 // entity 6
 {
-"classname" "func_detail"
-"_tb_group" "1"
+"classname" "func_nightmareplatform"
 // brush 0
 {
 ( 256 224 0 ) ( 256 225 0 ) ( 256 224 1 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -96,139 +98,20 @@
 }
 // entity 7
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "2"
-"_tb_linked_group_id" "{0ec263f9-2a2e-4d23-a3f3-db576fefe580}"
-"_tb_transformation" "1 0 0 144 0 1 0 -176 0 0 1 -16 0 0 0 1"
+"classname" "func_nightmareplatform"
+// brush 0
+{
+( 368 -24 -32 ) ( 368 -23 -32 ) ( 368 -24 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 368 -40 -32 ) ( 368 -40 -31 ) ( 369 -40 -32 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 368 -24 -28 ) ( 369 -24 -28 ) ( 368 -23 -28 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 432 40 -4 ) ( 432 41 -4 ) ( 433 40 -4 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 432 40 0 ) ( 433 40 0 ) ( 432 40 1 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 448 40 0 ) ( 448 40 1 ) ( 448 41 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }
 // entity 8
 {
-"classname" "nightmare_platform"
-"origin" "400 0 -16"
-"_tb_group" "2"
-}
-// entity 9
-{
-"classname" "func_detail"
-"_tb_group" "2"
-// brush 0
-{
-( 368 -32 -32 ) ( 368 -31 -32 ) ( 368 -32 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 368 -48 -32 ) ( 368 -48 -31 ) ( 369 -48 -32 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 368 -32 -28 ) ( 369 -32 -28 ) ( 368 -31 -28 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 432 32 -4 ) ( 432 33 -4 ) ( 433 32 -4 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 432 32 0 ) ( 433 32 0 ) ( 432 32 1 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 448 32 0 ) ( 448 32 1 ) ( 448 33 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 10
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "3"
-"_tb_linked_group_id" "{211cf039-0fab-4a39-9f50-72b3f288c43b}"
-"_tb_transformation" "1 0 0 271.99999999999994 0 1 0 32 0 0 1 0 0 0 0 1"
-}
-// entity 11
-{
-"classname" "nightmare_platform"
-"origin" "528 208 0"
-"_tb_group" "3"
-}
-// entity 12
-{
-"classname" "func_detail"
-"_tb_group" "3"
-// brush 0
-{
-( 480 176 -16 ) ( 480 177 -16 ) ( 480 176 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 496 176 -16 ) ( 496 176 -15 ) ( 497 176 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 496 176 -12 ) ( 497 176 -12 ) ( 496 177 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 560 240 12 ) ( 560 241 12 ) ( 561 240 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 560 256 16 ) ( 561 256 16 ) ( 560 256 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 560 240 16 ) ( 560 240 17 ) ( 560 241 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 13
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "4"
-"_tb_linked_group_id" "{8c77f189-90c7-4147-b10f-d284ac57f364}"
-"_tb_transformation" "1 0 0 399.99999999999994 0 1 0 -192 0 0 1 16 0 0 0 1"
-}
-// entity 14
-{
-"classname" "nightmare_platform"
-"origin" "656 -16 16"
-"_tb_group" "4"
-}
-// entity 15
-{
-"classname" "func_detail"
-"_tb_group" "4"
-// brush 0
-{
-( 608 -48 0 ) ( 608 -47 0 ) ( 608 -48 1 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 624 -48 0 ) ( 624 -48 1 ) ( 625 -48 0 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 624 -48 4 ) ( 625 -48 4 ) ( 624 -47 4 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 688 16 28 ) ( 688 17 28 ) ( 689 16 28 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 688 32 32 ) ( 689 32 32 ) ( 688 32 33 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 688 16 32 ) ( 688 16 33 ) ( 688 17 32 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 16
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "5"
-"_tb_linked_group_id" "{176e75bf-cdf1-4148-bd56-cf3254f29225}"
-"_tb_transformation" "1 0 0 576 0 1 0 0 0 0 1 0 0 0 0 1"
-}
-// entity 17
-{
-"classname" "nightmare_platform"
-"origin" "832 176 0"
-"_tb_group" "5"
-}
-// entity 18
-{
-"classname" "func_detail"
-"_tb_group" "5"
-// brush 0
-{
-( 800 144 -16 ) ( 800 145 -16 ) ( 800 144 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 800 128 -16 ) ( 800 128 -15 ) ( 801 128 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 800 144 -12 ) ( 801 144 -12 ) ( 800 145 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 864 208 12 ) ( 864 209 12 ) ( 865 208 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 864 208 16 ) ( 865 208 16 ) ( 864 208 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 880 208 16 ) ( 880 208 17 ) ( 880 209 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 19
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "6"
-"_tb_linked_group_id" "{7f234494-45fa-4648-9a0e-a9b763281bf7}"
-"_tb_transformation" "1 0 0 335.99999999999994 0 1 0 -400 0 0 1 -16 0 0 0 1"
-}
-// entity 20
-{
-"classname" "nightmare_platform"
-"origin" "592 -224 -16"
-"_tb_group" "6"
-}
-// entity 21
-{
-"classname" "func_detail"
-"_tb_group" "6"
+"classname" "func_nightmareplatform"
 // brush 0
 {
 ( 544 -256 -32 ) ( 544 -255 -32 ) ( 544 -256 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -239,25 +122,9 @@
 ( 624 -192 0 ) ( 624 -192 1 ) ( 624 -191 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 22
+// entity 9
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "7"
-"_tb_linked_group_id" "{12d02f29-28f3-4438-b075-78a1537e82bc}"
-"_tb_transformation" "1 0 0 544 0 1 0 -528 0 0 1 0 0 0 0 1"
-}
-// entity 23
-{
-"classname" "nightmare_platform"
-"origin" "800 -352 0"
-"_tb_group" "7"
-}
-// entity 24
-{
-"classname" "func_detail"
-"_tb_group" "7"
+"classname" "func_nightmareplatform"
 // brush 0
 {
 ( 752 -384 -16 ) ( 752 -383 -16 ) ( 752 -384 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -268,83 +135,9 @@
 ( 832 -320 16 ) ( 832 -320 17 ) ( 832 -319 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 25
+// entity 10
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "8"
-"_tb_linked_group_id" "{0a2bb6e2-8590-43e9-8310-b2da1170c821}"
-"_tb_transformation" "1 0 0 640 0 1 0 352 0 0 1 0 0 0 0 1"
-}
-// entity 26
-{
-"classname" "nightmare_platform"
-"origin" "896 528 0"
-"_tb_group" "8"
-}
-// entity 27
-{
-"classname" "func_detail"
-"_tb_group" "8"
-// brush 0
-{
-( 864 496 -16 ) ( 864 497 -16 ) ( 864 496 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 864 480 -16 ) ( 864 480 -15 ) ( 865 480 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 864 496 -12 ) ( 865 496 -12 ) ( 864 497 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 928 560 12 ) ( 928 561 12 ) ( 929 560 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 928 560 16 ) ( 929 560 16 ) ( 928 560 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 944 560 16 ) ( 944 560 17 ) ( 944 561 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 28
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "9"
-"_tb_linked_group_id" "{7822d24b-2933-48d3-bac0-f4247df7ff9e}"
-"_tb_transformation" "1 0 0 463.99999999999994 0 1 0 192 0 0 1 -16 0 0 0 1"
-}
-// entity 29
-{
-"classname" "nightmare_platform"
-"origin" "720 368 -16"
-"_tb_group" "9"
-}
-// entity 30
-{
-"classname" "func_detail"
-"_tb_group" "9"
-// brush 0
-{
-( 688 336 -32 ) ( 688 337 -32 ) ( 688 336 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 688 336 -32 ) ( 688 336 -31 ) ( 689 336 -32 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 688 336 -28 ) ( 689 336 -28 ) ( 688 337 -28 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 752 400 -4 ) ( 752 401 -4 ) ( 753 400 -4 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 752 416 0 ) ( 753 416 0 ) ( 752 416 1 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 768 400 0 ) ( 768 400 1 ) ( 768 401 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-}
-}
-// entity 31
-{
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "10"
-"_tb_linked_group_id" "{2f750461-9c2f-4fce-826a-5847d72800ee}"
-"_tb_transformation" "1 0 0 640 0 1 0 -272 0 0 1 -16 0 0 0 1"
-}
-// entity 32
-{
-"classname" "nightmare_platform"
-"origin" "896 -96 -16"
-"_tb_group" "10"
-}
-// entity 33
-{
-"classname" "func_detail"
-"_tb_group" "10"
+"classname" "func_nightmareplatform"
 // brush 0
 {
 ( 848 -128 -32 ) ( 848 -127 -32 ) ( 848 -128 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -355,54 +148,22 @@
 ( 928 -64 0 ) ( 928 -64 1 ) ( 928 -63 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 34
+// entity 11
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "11"
-"_tb_linked_group_id" "{d2a5992f-5856-4bf9-927e-9ede06050e65}"
-"_tb_transformation" "1 0 0 816.0000000000001 0 1 0 176 0 0 1 16 0 0 0 1"
-}
-// entity 35
-{
-"classname" "nightmare_platform"
-"origin" "1072 352 16"
-"_tb_group" "11"
-}
-// entity 36
-{
-"classname" "func_detail"
-"_tb_group" "11"
+"classname" "func_nightmareplatform"
 // brush 0
 {
-( 1024 320 0 ) ( 1024 321 0 ) ( 1024 320 1 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1040 304 0 ) ( 1040 304 1 ) ( 1041 304 0 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1040 320 4 ) ( 1041 320 4 ) ( 1040 321 4 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 1104 384 28 ) ( 1104 385 28 ) ( 1105 384 28 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 1104 400 32 ) ( 1105 400 32 ) ( 1104 400 33 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1104 384 32 ) ( 1104 384 33 ) ( 1104 385 32 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 608 -40 0 ) ( 608 -39 0 ) ( 608 -40 1 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 624 -40 0 ) ( 624 -40 1 ) ( 625 -40 0 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 624 -40 4 ) ( 625 -40 4 ) ( 624 -39 4 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 688 24 28 ) ( 688 25 28 ) ( 689 24 28 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 688 40 32 ) ( 689 40 32 ) ( 688 40 33 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 688 24 32 ) ( 688 24 33 ) ( 688 25 32 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 37
+// entity 12
 {
-"classname" "func_group"
-"_tb_type" "_tb_group"
-"_tb_name" "platform"
-"_tb_id" "12"
-"_tb_linked_group_id" "{f22f355b-bc92-44d5-b076-6173b8ca4ac7}"
-"_tb_transformation" "1 0 0 848 0 1 0 -144 0 0 1 0 0 0 0 1"
-}
-// entity 38
-{
-"classname" "nightmare_platform"
-"origin" "1104 32 0"
-"_tb_group" "12"
-}
-// entity 39
-{
-"classname" "func_detail"
-"_tb_group" "12"
+"classname" "func_nightmareplatform"
 // brush 0
 {
 ( 1056 0 -16 ) ( 1056 1 -16 ) ( 1056 0 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -413,21 +174,68 @@
 ( 1136 64 16 ) ( 1136 64 17 ) ( 1136 65 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 40
+// entity 13
 {
-"classname" "func_geo"
+"classname" "func_nightmareplatform"
 // brush 0
 {
-( 1376 -64 -64 ) ( 1376 -63 -64 ) ( 1376 -64 -63 ) nightmare_tex [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1376 -64 -64 ) ( 1376 -64 -63 ) ( 1377 -64 -64 ) nightmare_tex [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1376 -64 -64 ) ( 1377 -64 -64 ) ( 1376 -63 -64 ) nightmare_tex [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 1568 128 -32 ) ( 1568 129 -32 ) ( 1569 128 -32 ) nightmare_tex [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
-( 1568 128 -32 ) ( 1569 128 -32 ) ( 1568 128 -31 ) nightmare_tex [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
-( 1568 128 -32 ) ( 1568 128 -31 ) ( 1568 129 -32 ) nightmare_tex [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 480 176 -16 ) ( 480 177 -16 ) ( 480 176 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 496 176 -16 ) ( 496 176 -15 ) ( 497 176 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 496 176 -12 ) ( 497 176 -12 ) ( 496 177 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 560 240 12 ) ( 560 241 12 ) ( 561 240 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 560 256 16 ) ( 561 256 16 ) ( 560 256 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 560 240 16 ) ( 560 240 17 ) ( 560 241 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
 }
 }
-// entity 41
+// entity 14
 {
-"classname" "nightmare_leave"
-"origin" "1472 32 64"
+"classname" "func_nightmareplatform"
+// brush 0
+{
+( 800 144 -16 ) ( 800 145 -16 ) ( 800 144 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 800 128 -16 ) ( 800 128 -15 ) ( 801 128 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 800 144 -12 ) ( 801 144 -12 ) ( 800 145 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 864 208 12 ) ( 864 209 12 ) ( 865 208 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 864 208 16 ) ( 865 208 16 ) ( 864 208 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 880 208 16 ) ( 880 208 17 ) ( 880 209 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 15
+{
+"classname" "func_nightmareplatform"
+// brush 0
+{
+( 1024 320 0 ) ( 1024 321 0 ) ( 1024 320 1 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1040 304 0 ) ( 1040 304 1 ) ( 1041 304 0 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1040 320 4 ) ( 1041 320 4 ) ( 1040 321 4 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1104 384 28 ) ( 1104 385 28 ) ( 1105 384 28 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 1104 400 32 ) ( 1105 400 32 ) ( 1104 400 33 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 1104 384 32 ) ( 1104 384 33 ) ( 1104 385 32 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 16
+{
+"classname" "func_nightmareplatform"
+// brush 0
+{
+( 864 496 -16 ) ( 864 497 -16 ) ( 864 496 -15 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 864 480 -16 ) ( 864 480 -15 ) ( 865 480 -16 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 864 496 -12 ) ( 865 496 -12 ) ( 864 497 -12 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 928 560 12 ) ( 928 561 12 ) ( 929 560 12 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 928 560 16 ) ( 929 560 16 ) ( 928 560 17 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 944 560 16 ) ( 944 560 17 ) ( 944 561 16 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
+}
+// entity 17
+{
+"classname" "func_nightmareplatform"
+// brush 0
+{
+( 688 336 -32 ) ( 688 337 -32 ) ( 688 336 -31 ) transparent_col [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 688 336 -32 ) ( 688 336 -31 ) ( 689 336 -32 ) transparent_col [ 1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 688 336 -28 ) ( 689 336 -28 ) ( 688 337 -28 ) transparent_col [ -1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 752 400 -4 ) ( 752 401 -4 ) ( 753 400 -4 ) transparent_col [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
+( 752 416 0 ) ( 753 416 0 ) ( 752 416 1 ) transparent_col [ -1 0 0 0 ] [ 0 0 -1 0 ] 0 1 1
+( 768 400 0 ) ( 768 400 1 ) ( 768 401 0 ) transparent_col [ 0 1 0 0 ] [ 0 0 -1 0 ] 0 1 1
+}
 }

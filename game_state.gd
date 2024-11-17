@@ -16,6 +16,9 @@ var light_intensity: float = 100.0: # start at 100, between 0 and 200
 		light_intensity_changed.emit(new_intensity)
 var night_level: String = "1"
 
+var resp_idx := 0
+var last_used_tp_point: String
+
 signal player_set(player: Player)
 signal time_changed(new_time: float)
 signal light_intensity_changed(new_intensity: float)

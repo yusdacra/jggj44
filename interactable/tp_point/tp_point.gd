@@ -15,7 +15,9 @@ class_name TpPoint
 func _ready() -> void:
 	Scenes.change_finished.connect(
 		func(scene: Node):
-			scene.tp_points[func_godot_properties["tag"]] = self,
+			var tag: String = func_godot_properties["tag"]
+			self.name = tag
+			scene.tp_points[tag] = self,
 		CONNECT_ONE_SHOT,
 	)
 
@@ -30,10 +32,16 @@ func _on_interact(player: Player) -> void:
 			UILayer.hide_overlay()
 			player.controller.immobile = false
 			player.can_interact = true
+			GameState.last_used_tp_point = self.name
 	)
 
 func _tp_to_destination(player: Player) -> void:
 	var dest := destination
+	destination.enabled = false
+	# failsafe for if the player doesnt leave the tp area for some reason
+	get_tree().create_timer(1.0).timeout.connect(
+		func(): destination.enabled = true
+	)
 	if snap_to_ground:
 		dest.ground_ray.force_raycast_update()
 		if dest.ground_ray.is_colliding():
@@ -43,3 +51,7 @@ func _tp_to_destination(player: Player) -> void:
 
 func _on_interact_hover(player: Player) -> void:
 	UILayer.show_interact_text("press F to enter")
+
+
+func _on_body_exited(body: Node3D) -> void:
+	if body.get_parent() is Player: enabled = true

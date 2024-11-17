@@ -1,0 +1,12 @@
+~ sleep
+Go to sleep?
+- Yes
+	do GameState.change_to_nightmare()
+- No
+=> END
+
+~ nightmare1
+Aurora: ...
+Aurora: It's one of those "dream"s again.
+Aurora: I guess I have no choice but to follow it...
+=> END

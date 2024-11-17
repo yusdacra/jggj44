@@ -15,6 +15,9 @@ func post_ready(params: Dictionary) -> void:
 func pre_start(params: Dictionary) -> void:
 	level.get_node("Map").visible = false
 	GameState.player.controller.immobile = true
+	GameState.player.controller.jumping_enabled = true
+	GameState.player.controller.sprint_enabled = true
+	GameState.player.controller.crouch_enabled = true
 	player_init_rot = GameState.player.controller.HEAD.rotation + Vector3(0, PI, 0)
 	player_init_pos = GameState.player.controller.global_position
 	get_tree().process_frame.connect(_force_player_rot)
@@ -29,6 +32,9 @@ func _reveal():
 	GameState.player.controller.immobile = false
 	level.get_node("Map").visible = true
 	level.get_node("Stars").speed_scale = 1.0
+	#UILayer.show_dialogue(preload("res://dialogue/nightmare.dialogue"), "nightmare%s" % level.name)
+	for child in level.get_node("Map").get_children():
+		pass
 
 func _force_player_rot():
 	var head := GameState.player.controller.HEAD
