@@ -379,7 +379,7 @@
 }
 // entity 14
 {
-"classname" "Player"
+"classname" "player"
 "origin" "536 200 11"
 "angle" "90"
 }
