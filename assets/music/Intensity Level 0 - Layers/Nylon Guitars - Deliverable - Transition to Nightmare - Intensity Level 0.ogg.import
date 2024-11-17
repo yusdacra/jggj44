@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rqdvara0kav3"
+path="res://.godot/imported/Nylon Guitars - Deliverable - Transition to Nightmare - Intensity Level 0.ogg-7efd880b67afe81d71a0b3d99a1e4b76.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Nightmare - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Nylon Guitars - Deliverable - Transition to Nightmare - Intensity Level 0.ogg-7efd880b67afe81d71a0b3d99a1e4b76.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

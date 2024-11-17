@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbnlwssnh6t3u"
+path="res://.godot/imported/Double Bass - SSO - Nighttime - Intensity Level 3.ogg-d9d71b8f773cfc3a869813b0df34a45c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Nighttime - Intensity Level 3.ogg"
+dest_files=["res://.godot/imported/Double Bass - SSO - Nighttime - Intensity Level 3.ogg-d9d71b8f773cfc3a869813b0df34a45c.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

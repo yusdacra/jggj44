@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxbl8b4motgyt"
+path="res://.godot/imported/Percussion Deliverable - End Piece - Intensity Level 0.ogg-49e0613f33e8e91f6e1524dfd8f1adba.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - End Piece - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Percussion Deliverable - End Piece - Intensity Level 0.ogg-49e0613f33e8e91f6e1524dfd8f1adba.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

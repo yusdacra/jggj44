@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://diu72fxhrf0ci"
+path="res://.godot/imported/Percussion Deliverable - Transition to Nightmare - Intensity Level 0.ogg-bc7ea31f81096b583696cbdfea9bd30b.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Nightmare - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Percussion Deliverable - Transition to Nightmare - Intensity Level 0.ogg-bc7ea31f81096b583696cbdfea9bd30b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://076rjjg4stg2"
+path="res://.godot/imported/TAIL - Woodwinds - Deliverable - Daytime - Intensity Level 1.ogg-f8c94a020c9cadf38e4d6306db10d567.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 1 - Layers/TAILS/TAIL - Woodwinds - Deliverable - Daytime - Intensity Level 1.ogg"
+dest_files=["res://.godot/imported/TAIL - Woodwinds - Deliverable - Daytime - Intensity Level 1.ogg-f8c94a020c9cadf38e4d6306db10d567.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

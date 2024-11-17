@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dx7apa2myh13h"
+path="res://.godot/imported/Celli - SSO - Transition to Daytime - Intensity Level 2.ogg-fc66c4859c8292b57178a82e0a0357f0.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Transition to Daytime - Intensity Level 2.ogg"
+dest_files=["res://.godot/imported/Celli - SSO - Transition to Daytime - Intensity Level 2.ogg-fc66c4859c8292b57178a82e0a0357f0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

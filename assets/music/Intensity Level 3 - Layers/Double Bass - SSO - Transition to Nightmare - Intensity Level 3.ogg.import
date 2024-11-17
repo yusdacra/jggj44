@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jofcvm1sxuwf"
+path="res://.godot/imported/Double Bass - SSO - Transition to Nightmare - Intensity Level 3.ogg-04a1f48cbf9fe5592df2737b530f55e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Nightmare - Intensity Level 3.ogg"
+dest_files=["res://.godot/imported/Double Bass - SSO - Transition to Nightmare - Intensity Level 3.ogg-04a1f48cbf9fe5592df2737b530f55e6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

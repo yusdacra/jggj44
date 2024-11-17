@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d5iyvpkpxnx4"
+path="res://.godot/imported/Double Bass - SSO - Transition to Daytime - Intensity Level 3.ogg-a668befbbc9354c3e81a6b72e0b0bda9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 3 - Layers/Double Bass - SSO - Transition to Daytime - Intensity Level 3.ogg"
+dest_files=["res://.godot/imported/Double Bass - SSO - Transition to Daytime - Intensity Level 3.ogg-a668befbbc9354c3e81a6b72e0b0bda9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

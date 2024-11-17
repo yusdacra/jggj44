@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kx1y3o51ddg6"
+path="res://.godot/imported/Celli - SSO - Nightmare - Intensity Level 2.ogg-b223002f4fad0896ab17c794951b9838.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Nightmare - Intensity Level 2.ogg"
+dest_files=["res://.godot/imported/Celli - SSO - Nightmare - Intensity Level 2.ogg-b223002f4fad0896ab17c794951b9838.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

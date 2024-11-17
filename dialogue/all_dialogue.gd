@@ -5,6 +5,7 @@ extends Node
 var dialogue_resources: Array[DialogueResource] = []
 
 func _ready() -> void:
+	if not OS.is_debug_build(): queue_free(); return
 	var dir := DirAccess.open("res://dialogue/")
 	if dir.get_open_error() != OK:
 		Loggie.error("cannot open dialogue folder: %s" % dir.get_open_error())

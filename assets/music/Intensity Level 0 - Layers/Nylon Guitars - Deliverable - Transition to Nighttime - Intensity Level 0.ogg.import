@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7wiql2rxx53e"
+path="res://.godot/imported/Nylon Guitars - Deliverable - Transition to Nighttime - Intensity Level 0.ogg-b5b1e76d320a49ee71fefa0753db514d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Transition to Nighttime - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Nylon Guitars - Deliverable - Transition to Nighttime - Intensity Level 0.ogg-b5b1e76d320a49ee71fefa0753db514d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

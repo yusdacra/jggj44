@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqnoqrwte6sl4"
+path="res://.godot/imported/Nylon Guitars - Deliverable - Daytime - Intensity Level 0.ogg-beffa06dc54926d295c6705722a883c6.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Nylon Guitars - Deliverable - Daytime - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Nylon Guitars - Deliverable - Daytime - Intensity Level 0.ogg-beffa06dc54926d295c6705722a883c6.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

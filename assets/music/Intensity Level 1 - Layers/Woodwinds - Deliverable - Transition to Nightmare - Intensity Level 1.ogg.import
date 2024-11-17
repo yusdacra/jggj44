@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuwt26e6fvpn0"
+path="res://.godot/imported/Woodwinds - Deliverable - Transition to Nightmare - Intensity Level 1.ogg-fdbfdcdc6e327acbcc378346e4b54a20.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 1 - Layers/Woodwinds - Deliverable - Transition to Nightmare - Intensity Level 1.ogg"
+dest_files=["res://.godot/imported/Woodwinds - Deliverable - Transition to Nightmare - Intensity Level 1.ogg-fdbfdcdc6e327acbcc378346e4b54a20.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

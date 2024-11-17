@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxt1idgbvyoh8"
+path="res://.godot/imported/Percussion Deliverable - Transition to Daytime - Intensity Level 0.ogg-5a809eb84a81c91cddf98f243c665386.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 0 - Layers/Percussion Deliverable - Transition to Daytime - Intensity Level 0.ogg"
+dest_files=["res://.godot/imported/Percussion Deliverable - Transition to Daytime - Intensity Level 0.ogg-5a809eb84a81c91cddf98f243c665386.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bivn1qoulcelc"
+path="res://.godot/imported/Celli - SSO - Daytime - Intensity Level 2.ogg-4e44aa258a2eae4e0dc5f385206e7665.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/Intensity Level 2 - Layers/Celli - SSO - Daytime - Intensity Level 2.ogg"
+dest_files=["res://.godot/imported/Celli - SSO - Daytime - Intensity Level 2.ogg-4e44aa258a2eae4e0dc5f385206e7665.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
